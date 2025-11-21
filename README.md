@@ -1,7 +1,7 @@
 ## COLA: Rehearsal-Free Continual Orthogonal Low-Rank Adaptation for Class-Incremental Learning
 We provide the complete codebase used to benchmark continual learning performance on four popular benchmark datasets for continual learning.
 ## Model
-<img src="image/COLA.png" width="800"> 
+<img src="images/COLA.png" width="800"> 
 
 ## Download Datasets
 We conduct our experiments on the following datasets:
@@ -31,10 +31,10 @@ Mode Type: [direct or woodbury]
 ```
 ## Results
 ### Architectural generalizability of AACL
-<img src="image/graph-cola.png" width="600"> 
+<img src="images/graph-cola.png" width="600"> 
 
 ### Precision Matrix (P): A Key Component in AACL
-<img src="image/cola-bar.png" width="600"> 
+<img src="images/cola-bar.png" width="600"> 
 
 ## Acknowledgement 
 This work builds upon the [SD-LORA](https://github.com/WuYichen-97/SD-Lora-CL/) and [PILOT](https://github.com/LAMDA-CL/LAMDA-PILOT) repos. We sincerely thank the authors for their contribution.
