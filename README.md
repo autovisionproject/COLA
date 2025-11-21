@@ -6,7 +6,7 @@ We provide the complete codebase used to benchmark continual learning performanc
 ## Download Datasets
 We conduct our experiments on the following datasets:
 - ImageNet-A, ImageNet-R, CUB200, DomainNet
-- [Download dataset: [Reff-Link](https://github.com/LAMDA-CL/LAMDA-PILOT]
+- [Download dataset: [Reff-Link](https://github.com/LAMDA-CL/LAMDA-PILOT)]
   
 Place the dataset file inside the ```local_datasets``` directory
 
