@@ -1,0 +1,74 @@
+seed [1996]
+devices_type ['0']
+2025-11-13 14:56:48,994 [trainer.py] => config: ./exps/sdlora_ina_T5.json
+2025-11-13 14:56:48,994 [trainer.py] => seed: 1996
+2025-11-13 14:56:48,994 [trainer.py] => prefix: reproduce
+2025-11-13 14:56:48,994 [trainer.py] => dataset: imageneta
+2025-11-13 14:56:48,994 [trainer.py] => memory_size: 0
+2025-11-13 14:56:48,994 [trainer.py] => memory_per_class: 0
+2025-11-13 14:56:48,994 [trainer.py] => fixed_memory: False
+2025-11-13 14:56:48,994 [trainer.py] => shuffle: True
+2025-11-13 14:56:48,994 [trainer.py] => init_cls: 40
+2025-11-13 14:56:48,994 [trainer.py] => increment: 40
+2025-11-13 14:56:48,994 [trainer.py] => model_name: sdlora
+2025-11-13 14:56:48,994 [trainer.py] => backbone_type: vit_base_patch16_224
+2025-11-13 14:56:48,994 [trainer.py] => device: [device(type='cuda', index=0)]
+2025-11-13 14:56:48,995 [trainer.py] => optimizer: adam
+2025-11-13 14:56:48,995 [trainer.py] => scheduler: constant
+2025-11-13 14:56:48,995 [trainer.py] => filepath: ./logs/sdlora/ImageNetA_weightsAB-T5/
+2025-11-13 14:56:48,995 [trainer.py] => init_epoch: 20
+2025-11-13 14:56:48,995 [trainer.py] => init_lr: 0.01
+2025-11-13 14:56:48,995 [trainer.py] => init_milestones: [10, 15]
+2025-11-13 14:56:48,995 [trainer.py] => init_lr_decay: 0.05
+2025-11-13 14:56:48,995 [trainer.py] => init_weight_decay: 0.0005
+2025-11-13 14:56:48,995 [trainer.py] => epochs: 20
+2025-11-13 14:56:48,995 [trainer.py] => lrate: 0.005
+2025-11-13 14:56:48,995 [trainer.py] => milestones: [10, 15]
+2025-11-13 14:56:48,995 [trainer.py] => lrate_decay: 0.05
+2025-11-13 14:56:48,995 [trainer.py] => batch_size: 128
+2025-11-13 14:56:48,995 [trainer.py] => weight_decay: 0.0005
+2025-11-13 14:56:48,995 [trainer.py] => rank: 10
+2025-11-13 14:56:48,995 [trainer.py] => num_classes: 200
+2025-11-13 14:56:49,020 [data_manager.py] => [92, 182, 15, 79, 26, 173, 109, 188, 27, 157, 177, 6, 35, 93, 52, 136, 164, 184, 2, 125, 130, 179, 135, 150, 100, 97, 7, 86, 158, 178, 168, 78, 181, 170, 32, 89, 8, 192, 104, 12, 145, 120, 80, 49, 155, 85, 95, 33, 17, 175, 137, 44, 112, 124, 153, 190, 83, 138, 43, 73, 87, 94, 140, 134, 180, 105, 111, 24, 60, 149, 63, 123, 152, 116, 185, 176, 198, 194, 133, 46, 51, 195, 88, 197, 13, 103, 121, 174, 160, 82, 151, 18, 20, 34, 66, 50, 40, 3, 4, 118, 36, 144, 169, 72, 58, 99, 142, 161, 64, 47, 193, 127, 101, 31, 71, 196, 9, 110, 126, 199, 128, 122, 91, 119, 189, 16, 159, 81, 163, 21, 141, 156, 77, 30, 107, 19, 55, 57, 53, 106, 146, 45, 54, 172, 154, 183, 75, 143, 113, 62, 148, 11, 114, 131, 129, 171, 5, 96, 10, 39, 29, 165, 191, 70, 76, 23, 69, 115, 90, 56, 166, 68, 167, 42, 187, 147, 0, 22, 102, 108, 65, 61, 74, 59, 25, 37, 48, 84, 162, 28, 132, 139, 117, 14, 41, 38, 67, 98, 1, 186]
+nb_tasks : 5, nb_classes: 200 ..........................
+!!!!!!! multiple_gpus [device(type='cuda', index=0)]
+This is for the BaseNet initialization.
+2025-11-13 14:56:53,233 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2025-11-13 14:56:53,615 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./logs/sdlora/ImageNetA_weightsAB-T5/
+Initialize task-id and curtask id
+After BaseNet initialization.
+task 0
+2025-11-13 14:56:54,390 [trainer.py] => All params: 171965973
+2025-11-13 14:56:54,391 [trainer.py] => Trainable params: 368661
+2025-11-13 14:56:54,392 [sdlora.py] => Learning on 0-40
+  0%|          | 0/20 [00:00<?, ?it/s]Total FLOPs (approx): 145,244,160
+Total GFLOPs: 0.145244
+Task 0, Epoch 1/20 => Loss 3.673, Train_accy 12.83, Test_accy 47.30:   0%|          | 0/20 [00:12<?, ?it/s]Task 0, Epoch 1/20 => Loss 3.673, Train_accy 12.83, Test_accy 47.30:   5%|▌         | 1/20 [00:12<04:03, 12.83s/it]Task 0, Epoch 2/20 => Loss 1.778, Train_accy 56.07:   5%|▌         | 1/20 [00:23<04:03, 12.83s/it]                 Task 0, Epoch 2/20 => Loss 1.778, Train_accy 56.07:  10%|█         | 2/20 [00:23<03:31, 11.73s/it]Task 0, Epoch 3/20 => Loss 1.192, Train_accy 68.14:  10%|█         | 2/20 [00:34<03:31, 11.73s/it]Task 0, Epoch 3/20 => Loss 1.192, Train_accy 68.14:  15%|█▌        | 3/20 [00:34<03:13, 11.41s/it]Task 0, Epoch 4/20 => Loss 0.963, Train_accy 72.47:  15%|█▌        | 3/20 [00:44<03:13, 11.41s/it]Task 0, Epoch 4/20 => Loss 0.963, Train_accy 72.47:  20%|██        | 4/20 [00:44<02:54, 10.90s/it]Task 0, Epoch 5/20 => Loss 0.730, Train_accy 80.12:  20%|██        | 4/20 [00:55<02:54, 10.90s/it]Task 0, Epoch 5/20 => Loss 0.730, Train_accy 80.12:  25%|██▌       | 5/20 [00:55<02:39, 10.65s/it]Total FLOPs (approx): 145,244,160
+Total GFLOPs: 0.145244
+Task 0, Epoch 6/20 => Loss 0.661, Train_accy 82.16, Test_accy 76.83:  25%|██▌       | 5/20 [01:07<02:39, 10.65s/it]Task 0, Epoch 6/20 => Loss 0.661, Train_accy 82.16, Test_accy 76.83:  30%|███       | 6/20 [01:07<02:35, 11.12s/it]Task 0, Epoch 7/20 => Loss 0.554, Train_accy 84.88:  30%|███       | 6/20 [01:16<02:35, 11.12s/it]                 Task 0, Epoch 7/20 => Loss 0.554, Train_accy 84.88:  35%|███▌      | 7/20 [01:16<02:18, 10.65s/it]Task 0, Epoch 8/20 => Loss 0.525, Train_accy 85.22:  35%|███▌      | 7/20 [01:27<02:18, 10.65s/it]Task 0, Epoch 8/20 => Loss 0.525, Train_accy 85.22:  40%|████      | 8/20 [01:27<02:06, 10.58s/it]Task 0, Epoch 9/20 => Loss 0.435, Train_accy 87.09:  40%|████      | 8/20 [01:38<02:06, 10.58s/it]Task 0, Epoch 9/20 => Loss 0.435, Train_accy 87.09:  45%|████▌     | 9/20 [01:38<01:58, 10.76s/it]Task 0, Epoch 10/20 => Loss 0.388, Train_accy 89.80:  45%|████▌     | 9/20 [01:49<01:58, 10.76s/it]Task 0, Epoch 10/20 => Loss 0.388, Train_accy 89.80:  50%|█████     | 10/20 [01:49<01:47, 10.75s/it]Total FLOPs (approx): 145,244,160
+Total GFLOPs: 0.145244
+Task 0, Epoch 11/20 => Loss 0.394, Train_accy 91.08, Test_accy 78.73:  50%|█████     | 10/20 [02:01<01:47, 10.75s/it]Task 0, Epoch 11/20 => Loss 0.394, Train_accy 91.08, Test_accy 78.73:  55%|█████▌    | 11/20 [02:01<01:40, 11.17s/it]Task 0, Epoch 12/20 => Loss 0.367, Train_accy 91.08:  55%|█████▌    | 11/20 [02:12<01:40, 11.17s/it]                 Task 0, Epoch 12/20 => Loss 0.367, Train_accy 91.08:  60%|██████    | 12/20 [02:12<01:29, 11.24s/it]Task 0, Epoch 13/20 => Loss 0.404, Train_accy 89.12:  60%|██████    | 12/20 [02:22<01:29, 11.24s/it]Task 0, Epoch 13/20 => Loss 0.404, Train_accy 89.12:  65%|██████▌   | 13/20 [02:22<01:16, 10.94s/it]Task 0, Epoch 14/20 => Loss 0.395, Train_accy 89.04:  65%|██████▌   | 13/20 [02:32<01:16, 10.94s/it]Task 0, Epoch 14/20 => Loss 0.395, Train_accy 89.04:  70%|███████   | 14/20 [02:32<01:03, 10.55s/it]Task 0, Epoch 15/20 => Loss 0.399, Train_accy 89.46:  70%|███████   | 14/20 [02:43<01:03, 10.55s/it]Task 0, Epoch 15/20 => Loss 0.399, Train_accy 89.46:  75%|███████▌  | 15/20 [02:43<00:52, 10.53s/it]Total FLOPs (approx): 145,244,160
+Total GFLOPs: 0.145244
+Task 0, Epoch 16/20 => Loss 0.354, Train_accy 90.14, Test_accy 78.10:  75%|███████▌  | 15/20 [02:56<00:52, 10.53s/it]Task 0, Epoch 16/20 => Loss 0.354, Train_accy 90.14, Test_accy 78.10:  80%|████████  | 16/20 [02:56<00:45, 11.38s/it]Task 0, Epoch 17/20 => Loss 0.359, Train_accy 90.23:  80%|████████  | 16/20 [03:06<00:45, 11.38s/it]                 Task 0, Epoch 17/20 => Loss 0.359, Train_accy 90.23:  85%|████████▌ | 17/20 [03:06<00:33, 11.05s/it]Task 0, Epoch 18/20 => Loss 0.375, Train_accy 89.89:  85%|████████▌ | 17/20 [03:17<00:33, 11.05s/it]Task 0, Epoch 18/20 => Loss 0.375, Train_accy 89.89:  90%|█████████ | 18/20 [03:17<00:22, 11.10s/it]Task 0, Epoch 19/20 => Loss 0.381, Train_accy 89.46:  90%|█████████ | 18/20 [03:29<00:22, 11.10s/it]Task 0, Epoch 19/20 => Loss 0.381, Train_accy 89.46:  95%|█████████▌| 19/20 [03:29<00:11, 11.10s/it]Task 0, Epoch 20/20 => Loss 0.446, Train_accy 88.19:  95%|█████████▌| 19/20 [03:38<00:11, 11.10s/it]Task 0, Epoch 20/20 => Loss 0.446, Train_accy 88.19: 100%|██████████| 20/20 [03:38<00:00, 10.73s/it]Task 0, Epoch 20/20 => Loss 0.446, Train_accy 88.19: 100%|██████████| 20/20 [03:38<00:00, 10.95s/it]
+2025-11-13 15:00:33,704 [sdlora.py] => Task 0, Epoch 20/20 => Loss 0.446, Train_accy 88.19
+Traceback (most recent call last):
+  File "/home/block/continual/SD-Lora-CL/main.py", line 27, in <module>
+    main()
+  File "/home/block/continual/SD-Lora-CL/main.py", line 12, in main
+    train(args)
+  File "/home/block/continual/SD-Lora-CL/trainer.py", line 19, in train
+    _train(args)
+  File "/home/block/continual/SD-Lora-CL/trainer.py", line 80, in _train
+    model.incremental_train(data_manager)
+  File "/home/block/continual/SD-Lora-CL/models/sdlora.py", line 61, in incremental_train
+    self._train(self.train_loader, self.test_loader)
+  File "/home/block/continual/SD-Lora-CL/models/sdlora.py", line 130, in _train
+    self._network.backbone.save_lora_parameters(save_lora_name, self._cur_task)
+  File "/home/block/continual/SD-Lora-CL/backbone/lora.py", line 399, in save_lora_parameters
+    torch.save(self.w_As, filename + 'lora_w_a_'+str(task_id)+'.pt')
+  File "/home/block/myenv/lib/python3.12/site-packages/torch/serialization.py", line 850, in save
+    _save(
+  File "/home/block/myenv/lib/python3.12/site-packages/torch/serialization.py", line 1088, in _save
+    pickler.dump(obj)
+AttributeError: Can't pickle local object 'BaseLearner._compute_accuracy.<locals>.lora_flops_hook'

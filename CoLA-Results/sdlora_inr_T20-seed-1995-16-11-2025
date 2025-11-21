@@ -1,0 +1,45 @@
+seed [1995]
+devices_type ['0']
+2025-11-16 06:45:53,158 [trainer.py] => config: ./exps/sdlora_inr_T20-seed-1995.json
+2025-11-16 06:45:53,159 [trainer.py] => seed: 1995
+2025-11-16 06:45:53,159 [trainer.py] => prefix: reproduce
+2025-11-16 06:45:53,159 [trainer.py] => dataset: imagenetr
+2025-11-16 06:45:53,159 [trainer.py] => memory_size: 0
+2025-11-16 06:45:53,159 [trainer.py] => memory_per_class: 0
+2025-11-16 06:45:53,159 [trainer.py] => fixed_memory: False
+2025-11-16 06:45:53,159 [trainer.py] => shuffle: True
+2025-11-16 06:45:53,159 [trainer.py] => init_cls: 10
+2025-11-16 06:45:53,159 [trainer.py] => increment: 10
+2025-11-16 06:45:53,159 [trainer.py] => model_name: sdlora
+2025-11-16 06:45:53,159 [trainer.py] => backbone_type: vit_base_patch16_224
+2025-11-16 06:45:53,159 [trainer.py] => device: [device(type='cuda', index=0)]
+2025-11-16 06:45:53,159 [trainer.py] => optimizer: adam
+2025-11-16 06:45:53,159 [trainer.py] => scheduler: constant
+2025-11-16 06:45:53,159 [trainer.py] => filepath: ./logs/sdlora/ImageNetR3_weightsAB-10/
+2025-11-16 06:45:53,159 [trainer.py] => init_epoch: 20
+2025-11-16 06:45:53,159 [trainer.py] => init_lr: 0.01
+2025-11-16 06:45:53,159 [trainer.py] => init_milestones: [10000]
+2025-11-16 06:45:53,159 [trainer.py] => init_lr_decay: 0
+2025-11-16 06:45:53,159 [trainer.py] => init_weight_decay: 0.0005
+2025-11-16 06:45:53,159 [trainer.py] => epochs: 20
+2025-11-16 06:45:53,159 [trainer.py] => lrate: 0.01
+2025-11-16 06:45:53,159 [trainer.py] => milestones: [10000]
+2025-11-16 06:45:53,159 [trainer.py] => lrate_decay: 0
+2025-11-16 06:45:53,159 [trainer.py] => batch_size: 64
+2025-11-16 06:45:53,159 [trainer.py] => weight_decay: 0.0002
+2025-11-16 06:45:53,159 [trainer.py] => rank: 10
+2025-11-16 06:45:53,159 [trainer.py] => num_classes: 20
+2025-11-16 06:45:53,220 [data_manager.py] => [146, 198, 169, 126, 142, 183, 108, 86, 79, 35, 112, 29, 0, 2, 59, 178, 143, 31, 147, 33, 123, 114, 194, 54, 138, 75, 158, 26, 131, 141, 180, 132, 22, 49, 116, 111, 24, 98, 107, 89, 151, 83, 185, 15, 27, 136, 65, 1, 82, 87, 99, 153, 47, 144, 145, 175, 155, 77, 191, 199, 46, 28, 76, 71, 93, 137, 5, 188, 187, 74, 103, 173, 18, 80, 88, 48, 109, 81, 91, 101, 43, 102, 61, 182, 3, 14, 40, 42, 167, 66, 57, 73, 135, 39, 45, 184, 161, 85, 148, 121, 8, 195, 21, 4, 106, 133, 118, 10, 176, 50, 36, 192, 162, 172, 96, 197, 20, 117, 140, 186, 92, 97, 44, 149, 13, 37, 170, 25, 181, 171, 23, 104, 189, 11, 159, 67, 94, 68, 55, 6, 150, 165, 120, 139, 72, 154, 115, 125, 53, 58, 16, 113, 41, 190, 174, 127, 110, 7, 38, 32, 95, 19, 196, 51, 78, 34, 122, 152, 119, 134, 129, 130, 128, 17, 30, 90, 124, 160, 100, 193, 12, 56, 64, 168, 105, 63, 177, 70, 60, 163, 9, 62, 156, 52, 84, 157, 69, 179, 166, 164]
+nb_tasks : 20, nb_classes: 200 ..........................
+!!!!!!! multiple_gpus [device(type='cuda', index=0)]
+This is for the BaseNet initialization.
+2025-11-16 06:45:55,352 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2025-11-16 06:45:55,830 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./logs/sdlora/ImageNetR3_weightsAB-10/
+Initialize task-id and curtask id
+After BaseNet initialization.
+task 0
+2025-11-16 06:45:56,030 [trainer.py] => All params: 171965973
+2025-11-16 06:45:56,031 [trainer.py] => Trainable params: 368661
+2025-11-16 06:45:56,031 [sdlora.py] => Learning on 0-10
+  0%|          | 0/20 [00:00<?, ?it/s]Task 0, Epoch 1/20 => Loss 1.327, Train_accy 59.14, Test_accy 85.02:   0%|          | 0/20 [00:06<?, ?it/s]Task 0, Epoch 1/20 => Loss 1.327, Train_accy 59.14, Test_accy 85.02:   5%|▌         | 1/20 [00:06<02:09,  6.83s/it]

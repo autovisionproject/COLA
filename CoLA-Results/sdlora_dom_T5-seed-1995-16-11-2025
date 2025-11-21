@@ -1,0 +1,46 @@
+seed [1995]
+devices_type ['0']
+2025-11-16 05:14:54,385 [trainer.py] => config: ./exps/sdlora_dom_T5-seed-1995.json
+2025-11-16 05:14:54,385 [trainer.py] => seed: 1995
+2025-11-16 05:14:54,385 [trainer.py] => prefix: reproduce
+2025-11-16 05:14:54,385 [trainer.py] => dataset: domainnet
+2025-11-16 05:14:54,385 [trainer.py] => data_path: data/DomainNet/
+2025-11-16 05:14:54,385 [trainer.py] => memory_size: 0
+2025-11-16 05:14:54,385 [trainer.py] => memory_per_class: 0
+2025-11-16 05:14:54,385 [trainer.py] => fixed_memory: False
+2025-11-16 05:14:54,385 [trainer.py] => shuffle: True
+2025-11-16 05:14:54,385 [trainer.py] => init_cls: 69
+2025-11-16 05:14:54,385 [trainer.py] => increment: 69
+2025-11-16 05:14:54,385 [trainer.py] => model_name: sdlora
+2025-11-16 05:14:54,385 [trainer.py] => backbone_type: vit_base_patch16_224
+2025-11-16 05:14:54,385 [trainer.py] => device: [device(type='cuda', index=0)]
+2025-11-16 05:14:54,385 [trainer.py] => optimizer: adam
+2025-11-16 05:14:54,385 [trainer.py] => scheduler: steplr
+2025-11-16 05:14:54,385 [trainer.py] => filepath: ./logs/sdlora/domainnet_weightsAB-T10/
+2025-11-16 05:14:54,385 [trainer.py] => init_epoch: 10
+2025-11-16 05:14:54,385 [trainer.py] => init_lr: 0.02
+2025-11-16 05:14:54,386 [trainer.py] => init_milestones: [4, 6, 8, 10000]
+2025-11-16 05:14:54,386 [trainer.py] => init_lr_decay: 0.005
+2025-11-16 05:14:54,386 [trainer.py] => init_weight_decay: 0.0
+2025-11-16 05:14:54,386 [trainer.py] => epochs: 10
+2025-11-16 05:14:54,386 [trainer.py] => lrate: 0.02
+2025-11-16 05:14:54,386 [trainer.py] => milestones: [4, 6, 8, 10000]
+2025-11-16 05:14:54,386 [trainer.py] => lrate_decay: 0.005
+2025-11-16 05:14:54,386 [trainer.py] => batch_size: 128
+2025-11-16 05:14:54,386 [trainer.py] => weight_decay: 0.0
+2025-11-16 05:14:54,386 [trainer.py] => rank: 10
+2025-11-16 05:14:54,386 [trainer.py] => num_classes: 10
+2025-11-16 05:15:28,784 [data_manager.py] => [131, 270, 267, 342, 142, 151, 107, 105, 150, 111, 87, 324, 86, 153, 54, 33, 245, 158, 5, 333, 76, 160, 322, 315, 109, 259, 99, 138, 0, 146, 299, 190, 292, 96, 167, 35, 344, 278, 235, 53, 27, 83, 26, 13, 323, 328, 20, 314, 223, 2, 193, 102, 129, 343, 171, 255, 29, 264, 124, 32, 325, 37, 338, 44, 154, 268, 184, 258, 294, 80, 71, 51, 34, 243, 185, 206, 230, 8, 84, 239, 174, 219, 143, 155, 98, 48, 319, 277, 298, 183, 157, 159, 121, 261, 88, 161, 336, 49, 118, 192, 241, 110, 194, 130, 266, 25, 175, 178, 295, 101, 166, 31, 257, 334, 303, 67, 114, 181, 282, 22, 280, 200, 240, 108, 77, 78, 335, 165, 234, 1, 15, 134, 17, 196, 236, 212, 249, 332, 291, 59, 317, 301, 215, 205, 163, 61, 313, 68, 36, 112, 72, 162, 74, 179, 70, 182, 104, 202, 247, 180, 191, 306, 304, 82, 221, 46, 300, 318, 152, 28, 216, 329, 321, 341, 140, 137, 339, 148, 24, 10, 198, 106, 271, 172, 272, 204, 310, 120, 79, 287, 65, 156, 170, 47, 119, 226, 85, 89, 126, 229, 218, 92, 222, 214, 252, 256, 93, 133, 188, 262, 41, 132, 309, 209, 145, 18, 275, 75, 228, 244, 81, 176, 269, 208, 21, 201, 316, 7, 43, 260, 293, 189, 123, 225, 331, 3, 103, 14, 274, 217, 285, 116, 40, 42, 169, 66, 232, 330, 57, 91, 73, 195, 39, 45, 305, 147, 213, 97, 136, 135, 149, 231, 4, 265, 296, 276, 284, 250, 254, 50, 164, 248, 197, 251, 224, 117, 144, 220, 186, 141, 283, 281, 56, 23, 279, 289, 11, 311, 94, 237, 55, 6, 302, 227, 211, 320, 139, 327, 238, 115, 125, 58, 16, 113, 233, 297, 337, 173, 286, 207, 127, 253, 263, 187, 38, 199, 288, 95, 19, 307, 290, 122, 128, 273, 30, 90, 100, 308, 12, 312, 242, 64, 168, 63, 177, 326, 60, 9, 62, 203, 246, 52, 340, 69, 210]
+nb_tasks : 5, nb_classes: 345 ..........................
+!!!!!!! multiple_gpus [device(type='cuda', index=0)]
+This is for the BaseNet initialization.
+2025-11-16 05:15:33,383 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2025-11-16 05:15:34,299 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./logs/sdlora/domainnet_weightsAB-T10/
+Initialize task-id and curtask id
+After BaseNet initialization.
+task 0
+2025-11-16 05:15:34,525 [trainer.py] => All params: 171965973
+2025-11-16 05:15:34,526 [trainer.py] => Trainable params: 368661
+2025-11-16 05:15:34,527 [sdlora.py] => Learning on 0-69
+  0%|          | 0/10 [00:00<?, ?it/s]Task 0, Epoch 1/10 => Loss 1.070, Train_accy 74.20, Test_accy 83.07:   0%|          | 0/10 [05:06<?, ?it/s]Task 0, Epoch 1/10 => Loss 1.070, Train_accy 74.20, Test_accy 83.07:  10%|█         | 1/10 [05:06<46:00, 306.68s/it]Task 0, Epoch 2/10 => Loss 0.787, Train_accy 79.91:  10%|█         | 1/10 [09:44<46:00, 306.68s/it]                 Task 0, Epoch 2/10 => Loss 0.787, Train_accy 79.91:  20%|██        | 2/10 [09:44<38:38, 289.76s/it]Task 0, Epoch 3/10 => Loss 0.725, Train_accy 81.22:  20%|██        | 2/10 [14:22<38:38, 289.76s/it]Task 0, Epoch 3/10 => Loss 0.725, Train_accy 81.22:  30%|███       | 3/10 [14:22<33:11, 284.54s/it]Task 0, Epoch 4/10 => Loss 0.685, Train_accy 82.15:  30%|███       | 3/10 [19:00<33:11, 284.54s/it]Task 0, Epoch 4/10 => Loss 0.685, Train_accy 82.15:  40%|████      | 4/10 [19:00<28:11, 281.85s/it]Task 0, Epoch 5/10 => Loss 0.637, Train_accy 83.24:  40%|████      | 4/10 [23:38<28:11, 281.85s/it]Task 0, Epoch 5/10 => Loss 0.637, Train_accy 83.24:  50%|█████     | 5/10 [23:38<23:21, 280.24s/it]
