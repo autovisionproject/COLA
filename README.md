@@ -10,11 +10,8 @@ We conduct our experiments on the following datasets:
   
 Update dataset path : utils/data.py
  e.g.,
-- train_dir = "./data/domainnet/clipart_new/train/"
-- test_dir = "./data/domainnet/clipart_new/test/"
-  or
-  train_dir = "./data/imagenet-r/train/"
-  test_dir = "./data/imagenet-r/test/"
+  - train_dir = "./data/imagenet-r/train/" 
+  - test_dir = "./data/imagenet-r/test/"
 
 ### System Configuration
 ```
