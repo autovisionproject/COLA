@@ -7,13 +7,12 @@ We provide the complete codebase used to benchmark continual learning performanc
 We conduct our experiments on the following datasets:
 - ImageNet-A, ImageNet-R, CUB200, DomainNet
 - [Download dataset: [Reff-Link](https://github.com/LAMDA-CL/LAMDA-PILOT)]
-  
+```
 Update dataset path : utils/data.py
-
  e.g.,
   - train_dir = "./data/imagenet-r/train/" 
   - test_dir = "./data/imagenet-r/test/"
-
+```
 ### System Configuration
 ```
 Python 3.12.3
