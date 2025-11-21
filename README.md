@@ -8,7 +8,13 @@ We conduct our experiments on the following datasets:
 - ImageNet-A, ImageNet-R, CUB200, DomainNet
 - [Download dataset: [Reff-Link](https://github.com/LAMDA-CL/LAMDA-PILOT)]
   
-Place the dataset file inside the ```local_datasets``` directory
+Update dataset path : utils/data.py
+ e.g.,
+- train_dir = "./data/domainnet/clipart_new/train/"
+- test_dir = "./data/domainnet/clipart_new/test/"
+  or
+  train_dir = "./data/imagenet-r/train/"
+  test_dir = "./data/imagenet-r/test/"
 
 ### System Configuration
 ```
