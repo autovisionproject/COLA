@@ -1,5 +1,5 @@
 ## COLA: Rehearsal-Free Continual Orthogonal Low-Rank Adaptation for CIL
-We provide the complete codebase used to benchmark continual learning performance on four popular benchmark datasets for continual learning.
+We provide the complete codebase used to benchmark continual learning performance on four popular benchmark datasets for CL.
 ## Model
 <img src="images/COLA.png" width="700"> 
 
