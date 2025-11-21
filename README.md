@@ -9,6 +9,7 @@ We conduct our experiments on the following datasets:
 - [Download dataset: [Reff-Link](https://github.com/LAMDA-CL/LAMDA-PILOT)]
   
 Update dataset path : utils/data.py
+
  e.g.,
   - train_dir = "./data/imagenet-r/train/" 
   - test_dir = "./data/imagenet-r/test/"
