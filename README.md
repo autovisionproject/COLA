@@ -1,7 +1,5 @@
 ## COLA: Rehearsal-Free Continual Orthogonal Low-Rank Adaptation for CIL
 We provide the complete codebase used to benchmark continual learning performance on four popular benchmark datasets for CL.
-## Model
-<img src="images/COLA.png" width="700"> 
 
 ## Download Datasets
 We conduct our experiments on the following datasets:
@@ -32,12 +30,3 @@ Mode Type: [direct or woodbury]
 #python3 main.py --config=./exps/<baseline-config-file>
 
 ```
-## Results
-### Performance comparison of COLA against state-of-the-art continual learning methods.
-<img src="images/graph-cola.png" width="650"> 
-
-### Performance comparison with and without projection matrix.
-<img src="images/cola-bar.png" width="650"> 
-
-## Acknowledgement 
-This work builds upon the [SD-LORA](https://github.com/WuYichen-97/SD-Lora-CL/) and [PILOT](https://github.com/LAMDA-CL/LAMDA-PILOT) repos. We sincerely thank the authors for their contribution.
