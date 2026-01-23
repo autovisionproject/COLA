@@ -537,7 +537,7 @@ class timm_cola(nn.Module):
 
 
 class OjaContinualAdapter(nn.Module):
-    def __init__(self, dim, lr=1e-4, decay=0.01, consolidation_rate=0.3, device='cuda', 
+    def __init__(self, dim, lr=1e-4, decay=0.02, consolidation_rate=0.3, device='cuda', 
                     consolidate_every=10, proj_scale=0.02): 
         super().__init__()
         self.dim = dim
