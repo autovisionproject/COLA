@@ -1,7 +1,4 @@
-# Sheng Wang at Feb 22 2023
-
 import math
-
 import timm
 import torch
 import torch.nn as nn
