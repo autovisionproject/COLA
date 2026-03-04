@@ -1,4 +1,4 @@
-## COLA: Rehearsal-Free Continual Orthogonal Low-Rank Adaptation for CIL
+## COLA: Continual Orthogonal Low-Rank Adaptation for Class-Incremental Learning
 We provide the complete codebase used to benchmark continual learning performance on four popular benchmark datasets for CL.
 
 ## Download Datasets
@@ -19,9 +19,8 @@ CUDA Version: 12.4
 ```
 ### Train Model
 ```
-Tested Model: [ViT-B/16, DeiT-L/16, DeiT-S/16]
-Tested Datset: [ImageNet-A, ImageNet-R, CUB200, DomainNet]
-Mode Type: [direct or woodbury]
+Model Details: [ViT-B/16, DeiT-L/16, DeiT-S/16]
+Datset Details: [ImageNet-A, ImageNet-R, CUB200, DomainNet]
 
 ======== Run CoLa ================
 #python3 main.py --config=./exps/cola_<config-file>
