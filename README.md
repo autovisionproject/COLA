@@ -19,7 +19,7 @@ CUDA Version: 12.4
 ```
 ### 3. Train Model
 ```
-Model Details: [ViT-B/16, DeiT-L/16, DeiT-S/16]
+Model Details: [ViT-B/16, DeiT-B/16, DeiT-S/16]
 Datset Details: [ImageNet-A, ImageNet-R, CUB200, DomainNet]
 
 ======== Run CoLa ================
