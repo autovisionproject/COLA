@@ -35,7 +35,7 @@ Datset Details: [ImageNet-A, ImageNet-R, CUB200, DomainNet]
 ```
 
 ## Acknowledgement
-This repo is built upon the following projects. We sincerely appreciate for their contributions.
+This repo is built upon the following project. We sincerely appreciate for their contributions.
 
 1. [SD-Lora-CL](https://github.com/WuYichen-97/SD-Lora-CL)  
 
