@@ -1,4 +1,4 @@
-## COLA: Continual Orthogonal Low-Rank Adaptation for Class-Incremental Learning
+## [ECCV-2026] COLA: Continual Orthogonal Low-Rank Adaptation for Class-Incremental Learning
 We provide the complete codebase used to benchmark continual learning performance on four popular benchmark datasets for CL.
 
 ### 1. Download Datasets
@@ -29,3 +29,13 @@ Datset Details: [ImageNet-A, ImageNet-R, CUB200, DomainNet]
 #python3 main.py --config=./exps/<baseline-config-file>.json
 
 ```
+## Citation
+* Please cite this work if you find it useful for your research.
+```
+```
+
+## Acknowledgement
+This repo is built upon the following projects. We sincerely appreciate for their contributions.
+
+1. [SD-Lora-CL](https://github.com/WuYichen-97/SD-Lora-CL)  
+
