@@ -32,6 +32,17 @@ Datset Details: [ImageNet-A, ImageNet-R, CUB200, DomainNet]
 ## Citation
 * Please cite this work if you find it useful for your research.
 ```
+@InProceedings{10.1007/978-3-032-37138-6_26,
+author="Nagar, Monu
+and Das, Debasis",
+title="COLA: Continual Orthogonal Low-Rank Adaptation for Class-Incremental Learning",
+booktitle="Computer Vision -- ECCV 2026",
+year="2026",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="472--489",
+isbn="978-3-032-37138-6"
+}
 ```
 
 ## Acknowledgement
