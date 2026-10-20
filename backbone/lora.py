@@ -601,9 +601,6 @@ class timm_cola_train(nn.Module):
         sigma_v = sigma_v + self.scale *  z_v
         lora_q =  self.linear_b_q(sigma_q)
         lora_v =  self.linear_b_v(sigma_v)
-
-        lora_q =  self.linear_b_q(z_q)
-        lora_v =  self.linear_b_v(z_v)
         qkv_out = self.qkv(x)
         qkv_out[:, :, :self.dim] +=  lora_q
         qkv_out[:, :, -self.dim:] += lora_v
