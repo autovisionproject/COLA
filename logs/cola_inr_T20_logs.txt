@@ -1,0 +1,501 @@
+seed [1993]
+devices_type ['0']
+2026-03-10 19:05:30,088 [trainer.py] => config: ./exps/cola_inr_T20.json
+2026-03-10 19:05:30,088 [trainer.py] => seed: 1993
+2026-03-10 19:05:30,088 [trainer.py] => prefix: reproduce
+2026-03-10 19:05:30,088 [trainer.py] => dataset: imagenetr
+2026-03-10 19:05:30,088 [trainer.py] => memory_size: 0
+2026-03-10 19:05:30,088 [trainer.py] => memory_per_class: 0
+2026-03-10 19:05:30,088 [trainer.py] => fixed_memory: False
+2026-03-10 19:05:30,088 [trainer.py] => shuffle: True
+2026-03-10 19:05:30,088 [trainer.py] => init_cls: 10
+2026-03-10 19:05:30,088 [trainer.py] => increment: 10
+2026-03-10 19:05:30,088 [trainer.py] => model_name: cola
+2026-03-10 19:05:30,088 [trainer.py] => backbone_type: vit_base_patch16_224
+2026-03-10 19:05:30,088 [trainer.py] => device: [device(type='cuda', index=0)]
+2026-03-10 19:05:30,088 [trainer.py] => optimizer: adam
+2026-03-10 19:05:30,088 [trainer.py] => scheduler: constant
+2026-03-10 19:05:30,088 [trainer.py] => filepath: ./logs/cola/ImageNetR3_weightsAB/
+2026-03-10 19:05:30,088 [trainer.py] => init_epoch: 10
+2026-03-10 19:05:30,088 [trainer.py] => init_lr: 0.01
+2026-03-10 19:05:30,088 [trainer.py] => init_milestones: [10000]
+2026-03-10 19:05:30,088 [trainer.py] => init_lr_decay: 0
+2026-03-10 19:05:30,088 [trainer.py] => init_weight_decay: 0.0005
+2026-03-10 19:05:30,088 [trainer.py] => epochs: 10
+2026-03-10 19:05:30,088 [trainer.py] => lrate: 0.01
+2026-03-10 19:05:30,088 [trainer.py] => milestones: [10000]
+2026-03-10 19:05:30,088 [trainer.py] => lrate_decay: 0
+2026-03-10 19:05:30,088 [trainer.py] => batch_size: 128
+2026-03-10 19:05:30,088 [trainer.py] => weight_decay: 0.0002
+2026-03-10 19:05:30,088 [trainer.py] => rank: 10
+2026-03-10 19:05:30,088 [trainer.py] => num_classes: 10
+2026-03-10 19:05:30,132 [data_manager.py] => [168, 136, 51, 9, 183, 101, 171, 99, 42, 159, 191, 70, 16, 188, 27, 10, 175, 26, 68, 187, 98, 6, 85, 35, 112, 43, 100, 0, 103, 181, 88, 59, 4, 2, 116, 174, 94, 80, 106, 1, 147, 17, 141, 131, 72, 23, 173, 54, 197, 118, 87, 32, 79, 104, 91, 19, 135, 107, 178, 36, 11, 199, 142, 8, 122, 3, 28, 57, 153, 172, 190, 56, 49, 44, 97, 62, 151, 169, 194, 55, 192, 12, 189, 78, 66, 180, 15, 137, 109, 134, 92, 119, 126, 52, 170, 40, 148, 65, 144, 64, 138, 45, 77, 89, 154, 90, 71, 193, 74, 30, 113, 143, 96, 84, 67, 50, 186, 156, 69, 21, 18, 111, 108, 58, 125, 157, 150, 110, 182, 129, 166, 83, 81, 60, 13, 165, 14, 176, 63, 117, 5, 22, 145, 121, 38, 41, 82, 127, 114, 20, 31, 53, 37, 163, 196, 130, 152, 162, 86, 76, 24, 34, 184, 149, 33, 128, 198, 155, 146, 167, 139, 120, 140, 102, 47, 25, 158, 123, 46, 164, 61, 7, 115, 75, 133, 160, 105, 132, 179, 124, 48, 73, 93, 39, 95, 195, 29, 177, 185, 161]
+nb_tasks : 20, nb_classes: 200 ..........................
+!!!!!!! multiple_gpus [device(type='cuda', index=0)]
+This is for the BaseNet initialization.
+2026-03-10 19:05:31,290 [_builder.py] => Loading pretrained weights from Hugging Face hub (timm/vit_base_patch16_224.augreg2_in21k_ft_in1k)
+2026-03-10 19:05:31,752 [_client.py] => HTTP Request: HEAD https://huggingface.co/timm/vit_base_patch16_224.augreg2_in21k_ft_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-10 19:05:31,753 [_http.py] => Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-10 19:05:31,753 [_hub.py] => [timm/vit_base_patch16_224.augreg2_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+save_file ./logs/cola/ImageNetR3_weightsAB/
+Initialize task-id and curtask id
+After BaseNet initialization.
+task 0
+2026-03-10 19:05:32,051 [trainer.py] => All params: 171965953
+2026-03-10 19:05:32,052 [trainer.py] => Trainable params: 368641
+2026-03-10 19:05:32,052 [cola.py] => Learning on 0-10
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:06<?, ?it/s] 10%|█         | 1/10 [00:06<01:02,  6.95s/it]Task 0, Epoch 1/10 => Loss 1.856, Train_accy 39.86, Test_accy 86.62
+                                               10%|█         | 1/10 [00:12<01:02,  6.95s/it] 20%|██        | 2/10 [00:12<00:48,  6.09s/it]Task 0, Epoch 2/10 => Loss 0.739, Train_accy 80.88
+                                               20%|██        | 2/10 [00:17<00:48,  6.09s/it] 30%|███       | 3/10 [00:17<00:40,  5.80s/it]Task 0, Epoch 3/10 => Loss 0.458, Train_accy 85.06
+                                               30%|███       | 3/10 [00:23<00:40,  5.80s/it] 40%|████      | 4/10 [00:23<00:33,  5.64s/it]Task 0, Epoch 4/10 => Loss 0.392, Train_accy 86.69
+                                               40%|████      | 4/10 [00:28<00:33,  5.64s/it] 50%|█████     | 5/10 [00:28<00:27,  5.55s/it]Task 0, Epoch 5/10 => Loss 0.339, Train_accy 88.08
+                                               50%|█████     | 5/10 [00:35<00:27,  5.55s/it] 60%|██████    | 6/10 [00:35<00:23,  5.94s/it]Task 0, Epoch 6/10 => Loss 0.374, Train_accy 89.24, Test_accy 91.72
+                                               60%|██████    | 6/10 [00:41<00:23,  5.94s/it] 70%|███████   | 7/10 [00:41<00:17,  5.85s/it]Task 0, Epoch 7/10 => Loss 0.272, Train_accy 90.71
+                                               70%|███████   | 7/10 [00:46<00:17,  5.85s/it] 80%|████████  | 8/10 [00:46<00:11,  5.74s/it]Task 0, Epoch 8/10 => Loss 0.295, Train_accy 91.49
+                                               80%|████████  | 8/10 [00:52<00:11,  5.74s/it] 90%|█████████ | 9/10 [00:52<00:05,  5.69s/it]Task 0, Epoch 9/10 => Loss 0.279, Train_accy 91.56
+                                               90%|█████████ | 9/10 [00:57<00:05,  5.69s/it]100%|██████████| 10/10 [00:57<00:00,  5.61s/it]100%|██████████| 10/10 [00:57<00:00,  5.76s/it]
+Task 0, Epoch 10/10 => Loss 0.362, Train_accy 90.02
+2026-03-10 19:06:29,736 [cola.py] => Task 0, Epoch 10/10 => Loss 0.362, Train_accy 90.02
+2026-03-10 19:06:30,925 [trainer.py] => No NME accuracy.
+2026-03-10 19:06:30,925 [trainer.py] => CNN: {'total': np.float64(94.27), '00-09': np.float64(94.27), 'old': 0, 'new': np.float64(94.27)}
+2026-03-10 19:06:30,925 [trainer.py] => CNN top1 curve: [np.float64(94.27)]
+2026-03-10 19:06:30,925 [trainer.py] => CNN top5 curve: [np.float64(99.68)]
+
+Average Accuracy (CNN): 94.27
+2026-03-10 19:06:30,925 [trainer.py] => Average Accuracy (CNN): 94.27 
+
+task 1
+2026-03-10 19:06:30,927 [trainer.py] => All params: 171973643
+2026-03-10 19:06:30,928 [trainer.py] => Trainable params: 376331
+2026-03-10 19:06:30,929 [cola.py] => Learning on 10-20
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:08<?, ?it/s] 10%|█         | 1/10 [00:08<01:13,  8.18s/it]Task 1, Epoch 1/10 => Loss 1.545, Train_accy 30.16, Test_accy 82.99
+                                               10%|█         | 1/10 [00:14<01:13,  8.18s/it] 20%|██        | 2/10 [00:14<00:55,  6.92s/it]Task 1, Epoch 2/10 => Loss 0.494, Train_accy 76.29
+                                               20%|██        | 2/10 [00:20<00:55,  6.92s/it] 30%|███       | 3/10 [00:20<00:45,  6.52s/it]Task 1, Epoch 3/10 => Loss 0.335, Train_accy 84.51
+                                               30%|███       | 3/10 [00:26<00:45,  6.52s/it] 40%|████      | 4/10 [00:26<00:38,  6.41s/it]Task 1, Epoch 4/10 => Loss 0.325, Train_accy 85.39
+                                               40%|████      | 4/10 [00:32<00:38,  6.41s/it] 50%|█████     | 5/10 [00:32<00:31,  6.34s/it]Task 1, Epoch 5/10 => Loss 0.275, Train_accy 85.94
+                                               50%|█████     | 5/10 [00:40<00:31,  6.34s/it] 60%|██████    | 6/10 [00:40<00:27,  6.96s/it]Task 1, Epoch 6/10 => Loss 0.244, Train_accy 86.07, Test_accy 90.95
+                                               60%|██████    | 6/10 [00:46<00:27,  6.96s/it] 70%|███████   | 7/10 [00:46<00:19,  6.67s/it]Task 1, Epoch 7/10 => Loss 0.263, Train_accy 87.84
+                                               70%|███████   | 7/10 [00:53<00:19,  6.67s/it] 80%|████████  | 8/10 [00:53<00:13,  6.54s/it]Task 1, Epoch 8/10 => Loss 0.240, Train_accy 87.23
+                                               80%|████████  | 8/10 [00:59<00:13,  6.54s/it] 90%|█████████ | 9/10 [00:59<00:06,  6.44s/it]Task 1, Epoch 9/10 => Loss 0.216, Train_accy 88.99
+                                               90%|█████████ | 9/10 [01:05<00:06,  6.44s/it]100%|██████████| 10/10 [01:05<00:00,  6.35s/it]100%|██████████| 10/10 [01:05<00:00,  6.56s/it]
+Task 1, Epoch 10/10 => Loss 0.203, Train_accy 87.84
+2026-03-10 19:07:36,518 [cola.py] => Task 1, Epoch 10/10 => Loss 0.203, Train_accy 87.84
+2026-03-10 19:07:38,480 [trainer.py] => No NME accuracy.
+2026-03-10 19:07:38,480 [trainer.py] => CNN: {'total': np.float64(91.77), '00-09': np.float64(91.08), '10-19': np.float64(92.29), 'old': np.float64(91.08), 'new': np.float64(92.29)}
+2026-03-10 19:07:38,480 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77)]
+2026-03-10 19:07:38,480 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63)]
+
+Average Accuracy (CNN): 93.02
+2026-03-10 19:07:38,480 [trainer.py] => Average Accuracy (CNN): 93.02 
+
+2026-03-10 19:07:38,480 [trainer.py] => Forgetting (CNN): 3.1899999999999977
+task 2
+2026-03-10 19:07:38,481 [trainer.py] => All params: 171981333
+2026-03-10 19:07:38,482 [trainer.py] => Trainable params: 384021
+2026-03-10 19:07:38,483 [cola.py] => Learning on 20-30
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:07<?, ?it/s] 10%|█         | 1/10 [00:07<01:09,  7.71s/it]Task 2, Epoch 1/10 => Loss 1.666, Train_accy 18.86, Test_accy 83.74
+                                               10%|█         | 1/10 [00:13<01:09,  7.71s/it] 20%|██        | 2/10 [00:13<00:51,  6.38s/it]Task 2, Epoch 2/10 => Loss 0.503, Train_accy 69.35
+                                               20%|██        | 2/10 [00:18<00:51,  6.38s/it] 30%|███       | 3/10 [00:18<00:41,  5.93s/it]Task 2, Epoch 3/10 => Loss 0.365, Train_accy 77.97
+                                               30%|███       | 3/10 [00:23<00:41,  5.93s/it] 40%|████      | 4/10 [00:23<00:33,  5.64s/it]Task 2, Epoch 4/10 => Loss 0.250, Train_accy 82.68
+                                               40%|████      | 4/10 [00:28<00:33,  5.64s/it] 50%|█████     | 5/10 [00:28<00:27,  5.47s/it]Task 2, Epoch 5/10 => Loss 0.324, Train_accy 82.11
+                                               50%|█████     | 5/10 [00:36<00:27,  5.47s/it] 60%|██████    | 6/10 [00:36<00:25,  6.32s/it]Task 2, Epoch 6/10 => Loss 0.268, Train_accy 83.01, Test_accy 89.03
+                                               60%|██████    | 6/10 [00:42<00:25,  6.32s/it] 70%|███████   | 7/10 [00:42<00:18,  6.02s/it]Task 2, Epoch 7/10 => Loss 0.280, Train_accy 81.79
+                                               70%|███████   | 7/10 [00:47<00:18,  6.02s/it] 80%|████████  | 8/10 [00:47<00:11,  5.78s/it]Task 2, Epoch 8/10 => Loss 0.255, Train_accy 82.68
+                                               80%|████████  | 8/10 [00:52<00:11,  5.78s/it] 90%|█████████ | 9/10 [00:52<00:05,  5.59s/it]Task 2, Epoch 9/10 => Loss 0.265, Train_accy 81.63
+                                               90%|█████████ | 9/10 [00:58<00:05,  5.59s/it]100%|██████████| 10/10 [00:58<00:00,  5.52s/it]100%|██████████| 10/10 [00:58<00:00,  5.81s/it]
+Task 2, Epoch 10/10 => Loss 0.248, Train_accy 83.66
+2026-03-10 19:08:36,578 [cola.py] => Task 2, Epoch 10/10 => Loss 0.248, Train_accy 83.66
+2026-03-10 19:08:39,282 [trainer.py] => No NME accuracy.
+2026-03-10 19:08:39,282 [trainer.py] => CNN: {'total': np.float64(88.83), '00-09': np.float64(88.54), '10-19': np.float64(90.6), '20-29': np.float64(86.64), 'old': np.float64(89.71), 'new': np.float64(86.64)}
+2026-03-10 19:08:39,283 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83)]
+2026-03-10 19:08:39,283 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45)]
+
+Average Accuracy (CNN): 91.62333333333333
+2026-03-10 19:08:39,283 [trainer.py] => Average Accuracy (CNN): 91.62333333333333 
+
+2026-03-10 19:08:39,283 [trainer.py] => Forgetting (CNN): 3.710000000000001
+task 3
+2026-03-10 19:08:39,284 [trainer.py] => All params: 171989023
+2026-03-10 19:08:39,284 [trainer.py] => Trainable params: 391711
+2026-03-10 19:08:39,285 [cola.py] => Learning on 30-40
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:08<?, ?it/s] 10%|█         | 1/10 [00:08<01:17,  8.61s/it]Task 3, Epoch 1/10 => Loss 1.289, Train_accy 25.11, Test_accy 84.99
+                                               10%|█         | 1/10 [00:14<01:17,  8.61s/it] 20%|██        | 2/10 [00:14<00:55,  6.89s/it]Task 3, Epoch 2/10 => Loss 0.380, Train_accy 74.12
+                                               20%|██        | 2/10 [00:19<00:55,  6.89s/it] 30%|███       | 3/10 [00:19<00:43,  6.27s/it]Task 3, Epoch 3/10 => Loss 0.336, Train_accy 80.67
+                                               30%|███       | 3/10 [00:25<00:43,  6.27s/it] 40%|████      | 4/10 [00:25<00:35,  5.96s/it]Task 3, Epoch 4/10 => Loss 0.310, Train_accy 82.27
+                                               40%|████      | 4/10 [00:31<00:35,  5.96s/it] 50%|█████     | 5/10 [00:31<00:29,  5.87s/it]Task 3, Epoch 5/10 => Loss 0.295, Train_accy 84.09
+                                               50%|█████     | 5/10 [00:39<00:29,  5.87s/it] 60%|██████    | 6/10 [00:39<00:27,  6.79s/it]Task 3, Epoch 6/10 => Loss 0.258, Train_accy 84.17, Test_accy 88.25
+                                               60%|██████    | 6/10 [00:45<00:27,  6.79s/it] 70%|███████   | 7/10 [00:45<00:19,  6.44s/it]Task 3, Epoch 7/10 => Loss 0.227, Train_accy 85.39
+                                               70%|███████   | 7/10 [00:50<00:19,  6.44s/it] 80%|████████  | 8/10 [00:50<00:12,  6.19s/it]Task 3, Epoch 8/10 => Loss 0.222, Train_accy 85.92
+                                               80%|████████  | 8/10 [00:56<00:12,  6.19s/it] 90%|█████████ | 9/10 [00:56<00:05,  5.97s/it]Task 3, Epoch 9/10 => Loss 0.231, Train_accy 86.45
+                                               90%|█████████ | 9/10 [01:01<00:05,  5.97s/it]100%|██████████| 10/10 [01:01<00:00,  5.83s/it]100%|██████████| 10/10 [01:01<00:00,  6.20s/it]
+Task 3, Epoch 10/10 => Loss 0.267, Train_accy 86.30
+2026-03-10 19:09:41,277 [cola.py] => Task 3, Epoch 10/10 => Loss 0.267, Train_accy 86.30
+2026-03-10 19:09:44,307 [trainer.py] => No NME accuracy.
+2026-03-10 19:09:44,307 [trainer.py] => CNN: {'total': np.float64(88.54), '00-09': np.float64(87.58), '10-19': np.float64(90.12), '20-29': np.float64(85.62), '30-39': np.float64(89.94), 'old': np.float64(88.05), 'new': np.float64(89.94)}
+2026-03-10 19:09:44,307 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54)]
+2026-03-10 19:09:44,307 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03)]
+
+Average Accuracy (CNN): 90.8525
+2026-03-10 19:09:44,307 [trainer.py] => Average Accuracy (CNN): 90.8525 
+
+2026-03-10 19:09:44,307 [trainer.py] => Forgetting (CNN): 3.2933333333333317
+task 4
+2026-03-10 19:09:44,308 [trainer.py] => All params: 171996713
+2026-03-10 19:09:44,309 [trainer.py] => Trainable params: 399401
+2026-03-10 19:09:44,309 [cola.py] => Learning on 40-50
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:08<?, ?it/s] 10%|█         | 1/10 [00:08<01:17,  8.62s/it]Task 4, Epoch 1/10 => Loss 1.768, Train_accy 11.04, Test_accy 82.02
+                                               10%|█         | 1/10 [00:13<01:17,  8.62s/it] 20%|██        | 2/10 [00:13<00:51,  6.42s/it]Task 4, Epoch 2/10 => Loss 0.518, Train_accy 59.95
+                                               20%|██        | 2/10 [00:18<00:51,  6.42s/it] 30%|███       | 3/10 [00:18<00:40,  5.80s/it]Task 4, Epoch 3/10 => Loss 0.434, Train_accy 72.48
+                                               30%|███       | 3/10 [00:23<00:40,  5.80s/it] 40%|████      | 4/10 [00:23<00:32,  5.48s/it]Task 4, Epoch 4/10 => Loss 0.421, Train_accy 75.72
+                                               40%|████      | 4/10 [00:28<00:32,  5.48s/it] 50%|█████     | 5/10 [00:28<00:26,  5.32s/it]Task 4, Epoch 5/10 => Loss 0.362, Train_accy 76.86
+                                               50%|█████     | 5/10 [00:37<00:26,  5.32s/it] 60%|██████    | 6/10 [00:37<00:25,  6.49s/it]Task 4, Epoch 6/10 => Loss 0.343, Train_accy 78.18, Test_accy 86.17
+                                               60%|██████    | 6/10 [00:42<00:25,  6.49s/it] 70%|███████   | 7/10 [00:42<00:18,  6.02s/it]Task 4, Epoch 7/10 => Loss 0.308, Train_accy 77.91
+                                               70%|███████   | 7/10 [00:47<00:18,  6.02s/it] 80%|████████  | 8/10 [00:47<00:11,  5.70s/it]Task 4, Epoch 8/10 => Loss 0.321, Train_accy 79.23
+                                               80%|████████  | 8/10 [00:52<00:11,  5.70s/it] 90%|█████████ | 9/10 [00:52<00:05,  5.47s/it]Task 4, Epoch 9/10 => Loss 0.250, Train_accy 79.05
+                                               90%|█████████ | 9/10 [00:57<00:05,  5.47s/it]100%|██████████| 10/10 [00:57<00:00,  5.29s/it]100%|██████████| 10/10 [00:57<00:00,  5.73s/it]
+Task 4, Epoch 10/10 => Loss 0.251, Train_accy 80.54
+2026-03-10 19:10:41,580 [cola.py] => Task 4, Epoch 10/10 => Loss 0.251, Train_accy 80.54
+2026-03-10 19:10:45,309 [trainer.py] => No NME accuracy.
+2026-03-10 19:10:45,309 [trainer.py] => CNN: {'total': np.float64(85.74), '00-09': np.float64(85.35), '10-19': np.float64(87.71), '20-29': np.float64(82.19), '30-39': np.float64(87.71), '40-49': np.float64(84.35), 'old': np.float64(86.0), 'new': np.float64(84.35)}
+2026-03-10 19:10:45,309 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74)]
+2026-03-10 19:10:45,309 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98)]
+
+Average Accuracy (CNN): 89.83000000000001
+2026-03-10 19:10:45,309 [trainer.py] => Average Accuracy (CNN): 89.83000000000001 
+
+2026-03-10 19:10:45,309 [trainer.py] => Forgetting (CNN): 5.045000000000005
+task 5
+2026-03-10 19:10:45,310 [trainer.py] => All params: 172004403
+2026-03-10 19:10:45,311 [trainer.py] => Trainable params: 407091
+2026-03-10 19:10:45,312 [cola.py] => Learning on 50-60
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:09<?, ?it/s] 10%|█         | 1/10 [00:09<01:26,  9.63s/it]Task 5, Epoch 1/10 => Loss 1.462, Train_accy 11.64, Test_accy 81.56
+                                               10%|█         | 1/10 [00:14<01:26,  9.63s/it] 20%|██        | 2/10 [00:14<00:56,  7.06s/it]Task 5, Epoch 2/10 => Loss 0.492, Train_accy 58.27
+                                               20%|██        | 2/10 [00:20<00:56,  7.06s/it] 30%|███       | 3/10 [00:20<00:44,  6.31s/it]Task 5, Epoch 3/10 => Loss 0.399, Train_accy 74.16
+                                               30%|███       | 3/10 [00:25<00:44,  6.31s/it] 40%|████      | 4/10 [00:25<00:35,  5.94s/it]Task 5, Epoch 4/10 => Loss 0.339, Train_accy 77.53
+                                               40%|████      | 4/10 [00:31<00:35,  5.94s/it] 50%|█████     | 5/10 [00:31<00:28,  5.76s/it]Task 5, Epoch 5/10 => Loss 0.294, Train_accy 79.45
+                                               50%|█████     | 5/10 [00:40<00:28,  5.76s/it] 60%|██████    | 6/10 [00:40<00:28,  7.10s/it]Task 5, Epoch 6/10 => Loss 0.368, Train_accy 76.16, Test_accy 85.63
+                                               60%|██████    | 6/10 [00:46<00:28,  7.10s/it] 70%|███████   | 7/10 [00:46<00:19,  6.50s/it]Task 5, Epoch 7/10 => Loss 0.263, Train_accy 79.70
+                                               70%|███████   | 7/10 [00:51<00:19,  6.50s/it] 80%|████████  | 8/10 [00:51<00:12,  6.09s/it]Task 5, Epoch 8/10 => Loss 0.271, Train_accy 80.42
+                                               80%|████████  | 8/10 [00:56<00:12,  6.09s/it] 90%|█████████ | 9/10 [00:56<00:05,  5.83s/it]Task 5, Epoch 9/10 => Loss 0.238, Train_accy 79.86
+                                               90%|█████████ | 9/10 [01:01<00:05,  5.83s/it]100%|██████████| 10/10 [01:01<00:00,  5.70s/it]100%|██████████| 10/10 [01:01<00:00,  6.20s/it]
+Task 5, Epoch 10/10 => Loss 0.234, Train_accy 78.97
+2026-03-10 19:11:47,273 [cola.py] => Task 5, Epoch 10/10 => Loss 0.234, Train_accy 78.97
+2026-03-10 19:11:51,474 [trainer.py] => No NME accuracy.
+2026-03-10 19:11:51,474 [trainer.py] => CNN: {'total': np.float64(85.52), '00-09': np.float64(86.62), '10-19': np.float64(87.23), '20-29': np.float64(80.48), '30-39': np.float64(88.55), '40-49': np.float64(80.53), '50-59': np.float64(87.67), 'old': np.float64(85.13), 'new': np.float64(87.67)}
+2026-03-10 19:11:51,474 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52)]
+2026-03-10 19:11:51,474 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36)]
+
+Average Accuracy (CNN): 89.11166666666668
+2026-03-10 19:11:51,474 [trainer.py] => Average Accuracy (CNN): 89.11166666666668 
+
+2026-03-10 19:11:51,474 [trainer.py] => Forgetting (CNN): 4.815999999999997
+task 6
+2026-03-10 19:11:51,475 [trainer.py] => All params: 172012093
+2026-03-10 19:11:51,476 [trainer.py] => Trainable params: 414781
+2026-03-10 19:11:51,477 [cola.py] => Learning on 60-70
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:10<?, ?it/s] 10%|█         | 1/10 [00:10<01:30, 10.06s/it]Task 6, Epoch 1/10 => Loss 1.457, Train_accy 12.26, Test_accy 81.41
+                                               10%|█         | 1/10 [00:15<01:30, 10.06s/it] 20%|██        | 2/10 [00:15<00:57,  7.25s/it]Task 6, Epoch 2/10 => Loss 0.527, Train_accy 57.37
+                                               20%|██        | 2/10 [00:20<00:57,  7.25s/it] 30%|███       | 3/10 [00:20<00:44,  6.37s/it]Task 6, Epoch 3/10 => Loss 0.428, Train_accy 70.21
+                                               30%|███       | 3/10 [00:26<00:44,  6.37s/it] 40%|████      | 4/10 [00:26<00:36,  6.00s/it]Task 6, Epoch 4/10 => Loss 0.377, Train_accy 73.50
+                                               40%|████      | 4/10 [00:31<00:36,  6.00s/it] 50%|█████     | 5/10 [00:31<00:28,  5.70s/it]Task 6, Epoch 5/10 => Loss 0.333, Train_accy 75.56
+                                               50%|█████     | 5/10 [00:41<00:28,  5.70s/it] 60%|██████    | 6/10 [00:41<00:28,  7.13s/it]Task 6, Epoch 6/10 => Loss 0.335, Train_accy 73.83, Test_accy 84.36
+                                               60%|██████    | 6/10 [00:46<00:28,  7.13s/it] 70%|███████   | 7/10 [00:46<00:19,  6.50s/it]Task 6, Epoch 7/10 => Loss 0.326, Train_accy 75.47
+                                               70%|███████   | 7/10 [00:51<00:19,  6.50s/it] 80%|████████  | 8/10 [00:51<00:12,  6.08s/it]Task 6, Epoch 8/10 => Loss 0.298, Train_accy 75.39
+                                               80%|████████  | 8/10 [00:56<00:12,  6.08s/it] 90%|█████████ | 9/10 [00:56<00:05,  5.84s/it]Task 6, Epoch 9/10 => Loss 0.299, Train_accy 75.14
+                                               90%|█████████ | 9/10 [01:01<00:05,  5.84s/it]100%|██████████| 10/10 [01:01<00:00,  5.62s/it]100%|██████████| 10/10 [01:01<00:00,  6.20s/it]
+Task 6, Epoch 10/10 => Loss 0.258, Train_accy 76.46
+2026-03-10 19:12:53,473 [cola.py] => Task 6, Epoch 10/10 => Loss 0.258, Train_accy 76.46
+2026-03-10 19:12:58,259 [trainer.py] => No NME accuracy.
+2026-03-10 19:12:58,259 [trainer.py] => CNN: {'total': np.float64(84.81), '00-09': np.float64(83.12), '10-19': np.float64(84.82), '20-29': np.float64(81.16), '30-39': np.float64(87.43), '40-49': np.float64(81.3), '50-59': np.float64(87.67), '60-69': np.float64(87.29), 'old': np.float64(84.44), 'new': np.float64(87.29)}
+2026-03-10 19:12:58,259 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81)]
+2026-03-10 19:12:58,259 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25)]
+
+Average Accuracy (CNN): 88.49714285714286
+2026-03-10 19:12:58,259 [trainer.py] => Average Accuracy (CNN): 88.49714285714286 
+
+2026-03-10 19:12:58,259 [trainer.py] => Forgetting (CNN): 4.9433333333333325
+task 7
+2026-03-10 19:12:58,260 [trainer.py] => All params: 172019783
+2026-03-10 19:12:58,261 [trainer.py] => Trainable params: 422471
+2026-03-10 19:12:58,262 [cola.py] => Learning on 70-80
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:09<?, ?it/s] 10%|█         | 1/10 [00:09<01:28,  9.84s/it]Task 7, Epoch 1/10 => Loss 1.546, Train_accy 11.52, Test_accy 80.72
+                                               10%|█         | 1/10 [00:14<01:28,  9.84s/it] 20%|██        | 2/10 [00:14<00:54,  6.77s/it]Task 7, Epoch 2/10 => Loss 0.430, Train_accy 59.17
+                                               20%|██        | 2/10 [00:19<00:54,  6.77s/it] 30%|███       | 3/10 [00:19<00:40,  5.80s/it]Task 7, Epoch 3/10 => Loss 0.350, Train_accy 74.29
+                                               30%|███       | 3/10 [00:23<00:40,  5.80s/it] 40%|████      | 4/10 [00:23<00:32,  5.35s/it]Task 7, Epoch 4/10 => Loss 0.252, Train_accy 80.28
+                                               40%|████      | 4/10 [00:28<00:32,  5.35s/it] 50%|█████     | 5/10 [00:28<00:25,  5.09s/it]Task 7, Epoch 5/10 => Loss 0.296, Train_accy 80.37
+                                               50%|█████     | 5/10 [00:37<00:25,  5.09s/it] 60%|██████    | 6/10 [00:37<00:26,  6.62s/it]Task 7, Epoch 6/10 => Loss 0.242, Train_accy 81.47, Test_accy 82.75
+                                               60%|██████    | 6/10 [00:42<00:26,  6.62s/it] 70%|███████   | 7/10 [00:42<00:18,  6.03s/it]Task 7, Epoch 7/10 => Loss 0.203, Train_accy 82.03
+                                               70%|███████   | 7/10 [00:47<00:18,  6.03s/it] 80%|████████  | 8/10 [00:47<00:11,  5.60s/it]Task 7, Epoch 8/10 => Loss 0.209, Train_accy 81.57
+                                               80%|████████  | 8/10 [00:52<00:11,  5.60s/it] 90%|█████████ | 9/10 [00:52<00:05,  5.35s/it]Task 7, Epoch 9/10 => Loss 0.195, Train_accy 83.78
+                                               90%|█████████ | 9/10 [00:57<00:05,  5.35s/it]100%|██████████| 10/10 [00:57<00:00,  5.17s/it]100%|██████████| 10/10 [00:57<00:00,  5.71s/it]
+Task 7, Epoch 10/10 => Loss 0.169, Train_accy 81.20
+2026-03-10 19:13:55,330 [cola.py] => Task 7, Epoch 10/10 => Loss 0.169, Train_accy 81.20
+2026-03-10 19:14:00,534 [trainer.py] => No NME accuracy.
+2026-03-10 19:14:00,534 [trainer.py] => CNN: {'total': np.float64(83.15), '00-09': np.float64(80.57), '10-19': np.float64(81.69), '20-29': np.float64(78.08), '30-39': np.float64(86.59), '40-49': np.float64(78.63), '50-59': np.float64(85.67), '60-69': np.float64(85.57), '70-79': np.float64(88.28), 'old': np.float64(82.53), 'new': np.float64(88.28)}
+2026-03-10 19:14:00,534 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81), np.float64(83.15)]
+2026-03-10 19:14:00,534 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25), np.float64(95.01)]
+
+Average Accuracy (CNN): 87.82875
+2026-03-10 19:14:00,534 [trainer.py] => Average Accuracy (CNN): 87.82875 
+
+2026-03-10 19:14:00,534 [trainer.py] => Forgetting (CNN): 6.521428571428574
+task 8
+2026-03-10 19:14:00,535 [trainer.py] => All params: 172027473
+2026-03-10 19:14:00,537 [trainer.py] => Trainable params: 430161
+2026-03-10 19:14:00,538 [cola.py] => Learning on 80-90
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:11<?, ?it/s] 10%|█         | 1/10 [00:11<01:44, 11.62s/it]Task 8, Epoch 1/10 => Loss 1.487, Train_accy 14.40, Test_accy 79.63
+                                               10%|█         | 1/10 [00:17<01:44, 11.62s/it] 20%|██        | 2/10 [00:17<01:05,  8.22s/it]Task 8, Epoch 2/10 => Loss 0.449, Train_accy 59.38
+                                               20%|██        | 2/10 [00:23<01:05,  8.22s/it] 30%|███       | 3/10 [00:23<00:49,  7.05s/it]Task 8, Epoch 3/10 => Loss 0.423, Train_accy 69.72
+                                               30%|███       | 3/10 [00:28<00:49,  7.05s/it] 40%|████      | 4/10 [00:28<00:39,  6.57s/it]Task 8, Epoch 4/10 => Loss 0.325, Train_accy 72.45
+                                               40%|████      | 4/10 [00:34<00:39,  6.57s/it] 50%|█████     | 5/10 [00:34<00:31,  6.30s/it]Task 8, Epoch 5/10 => Loss 0.304, Train_accy 74.74
+                                               50%|█████     | 5/10 [00:46<00:31,  6.30s/it] 60%|██████    | 6/10 [00:46<00:32,  8.17s/it]Task 8, Epoch 6/10 => Loss 0.297, Train_accy 75.26, Test_accy 83.11
+                                               60%|██████    | 6/10 [00:52<00:32,  8.17s/it] 70%|███████   | 7/10 [00:52<00:22,  7.53s/it]Task 8, Epoch 7/10 => Loss 0.290, Train_accy 75.26
+                                               70%|███████   | 7/10 [00:58<00:22,  7.53s/it] 80%|████████  | 8/10 [00:58<00:13,  6.93s/it]Task 8, Epoch 8/10 => Loss 0.265, Train_accy 75.78
+                                               80%|████████  | 8/10 [01:04<00:13,  6.93s/it] 90%|█████████ | 9/10 [01:04<00:06,  6.59s/it]Task 8, Epoch 9/10 => Loss 0.226, Train_accy 76.81
+                                               90%|█████████ | 9/10 [01:10<00:06,  6.59s/it]100%|██████████| 10/10 [01:10<00:00,  6.32s/it]100%|██████████| 10/10 [01:10<00:00,  7.00s/it]
+Task 8, Epoch 10/10 => Loss 0.220, Train_accy 75.70
+2026-03-10 19:15:10,548 [cola.py] => Task 8, Epoch 10/10 => Loss 0.220, Train_accy 75.70
+2026-03-10 19:15:16,256 [trainer.py] => No NME accuracy.
+2026-03-10 19:15:16,256 [trainer.py] => CNN: {'total': np.float64(83.39), '00-09': np.float64(84.08), '10-19': np.float64(83.86), '20-29': np.float64(77.05), '30-39': np.float64(86.03), '40-49': np.float64(77.48), '50-59': np.float64(85.0), '60-69': np.float64(85.22), '70-79': np.float64(87.18), '80-89': np.float64(83.33), 'old': np.float64(83.39), 'new': np.float64(83.33)}
+2026-03-10 19:15:16,256 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81), np.float64(83.15), np.float64(83.39)]
+2026-03-10 19:15:16,256 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25), np.float64(95.01), np.float64(94.3)]
+
+Average Accuracy (CNN): 87.33555555555556
+2026-03-10 19:15:16,256 [trainer.py] => Average Accuracy (CNN): 87.33555555555556 
+
+2026-03-10 19:15:16,256 [trainer.py] => Forgetting (CNN): 5.60375
+task 9
+2026-03-10 19:15:16,257 [trainer.py] => All params: 172035163
+2026-03-10 19:15:16,258 [trainer.py] => Trainable params: 437851
+2026-03-10 19:15:16,259 [cola.py] => Learning on 90-100
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:09<?, ?it/s] 10%|█         | 1/10 [00:09<01:26,  9.62s/it]Task 9, Epoch 1/10 => Loss 2.125, Train_accy 1.05, Test_accy 78.77
+                                               10%|█         | 1/10 [00:13<01:26,  9.62s/it] 20%|██        | 2/10 [00:13<00:48,  6.01s/it]Task 9, Epoch 2/10 => Loss 0.691, Train_accy 26.32
+                                               20%|██        | 2/10 [00:16<00:48,  6.01s/it] 30%|███       | 3/10 [00:16<00:34,  4.87s/it]Task 9, Epoch 3/10 => Loss 0.405, Train_accy 56.58
+                                               30%|███       | 3/10 [00:20<00:34,  4.87s/it] 40%|████      | 4/10 [00:20<00:26,  4.35s/it]Task 9, Epoch 4/10 => Loss 0.332, Train_accy 66.32
+                                               40%|████      | 4/10 [00:23<00:26,  4.35s/it] 50%|█████     | 5/10 [00:23<00:20,  4.03s/it]Task 9, Epoch 5/10 => Loss 0.327, Train_accy 73.95
+                                               50%|█████     | 5/10 [00:33<00:20,  4.03s/it] 60%|██████    | 6/10 [00:33<00:23,  5.87s/it]Task 9, Epoch 6/10 => Loss 0.330, Train_accy 74.21, Test_accy 82.05
+                                               60%|██████    | 6/10 [00:36<00:23,  5.87s/it] 70%|███████   | 7/10 [00:36<00:15,  5.08s/it]Task 9, Epoch 7/10 => Loss 0.243, Train_accy 77.37
+                                               70%|███████   | 7/10 [00:40<00:15,  5.08s/it] 80%|████████  | 8/10 [00:40<00:09,  4.57s/it]Task 9, Epoch 8/10 => Loss 0.272, Train_accy 75.39
+                                               80%|████████  | 8/10 [00:43<00:09,  4.57s/it] 90%|█████████ | 9/10 [00:43<00:04,  4.22s/it]Task 9, Epoch 9/10 => Loss 0.239, Train_accy 78.95
+                                               90%|█████████ | 9/10 [00:46<00:04,  4.22s/it]100%|██████████| 10/10 [00:46<00:00,  4.01s/it]100%|██████████| 10/10 [00:46<00:00,  4.70s/it]
+Task 9, Epoch 10/10 => Loss 0.229, Train_accy 78.16
+2026-03-10 19:16:03,253 [cola.py] => Task 9, Epoch 10/10 => Loss 0.229, Train_accy 78.16
+2026-03-10 19:16:09,078 [trainer.py] => No NME accuracy.
+2026-03-10 19:16:09,078 [trainer.py] => CNN: {'total': np.float64(81.46), '00-09': np.float64(83.12), '10-19': np.float64(82.17), '20-29': np.float64(77.05), '30-39': np.float64(84.08), '40-49': np.float64(71.37), '50-59': np.float64(82.67), '60-69': np.float64(82.82), '70-79': np.float64(85.71), '80-89': np.float64(82.53), '90-99': np.float64(80.68), 'old': np.float64(81.51), 'new': np.float64(80.68)}
+2026-03-10 19:16:09,078 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81), np.float64(83.15), np.float64(83.39), np.float64(81.46)]
+2026-03-10 19:16:09,078 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25), np.float64(95.01), np.float64(94.3), np.float64(93.22)]
+
+Average Accuracy (CNN): 86.748
+2026-03-10 19:16:09,078 [trainer.py] => Average Accuracy (CNN): 86.748 
+
+2026-03-10 19:16:09,079 [trainer.py] => Forgetting (CNN): 6.94888888888889
+task 10
+2026-03-10 19:16:09,080 [trainer.py] => All params: 172042853
+2026-03-10 19:16:09,080 [trainer.py] => Trainable params: 445541
+2026-03-10 19:16:09,081 [cola.py] => Learning on 100-110
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:11<?, ?it/s] 10%|█         | 1/10 [00:11<01:44, 11.63s/it]Task 10, Epoch 1/10 => Loss 1.500, Train_accy 6.84, Test_accy 77.60
+                                               10%|█         | 1/10 [00:16<01:44, 11.63s/it] 20%|██        | 2/10 [00:16<01:01,  7.74s/it]Task 10, Epoch 2/10 => Loss 0.490, Train_accy 47.15
+                                               20%|██        | 2/10 [00:21<01:01,  7.74s/it] 30%|███       | 3/10 [00:21<00:44,  6.41s/it]Task 10, Epoch 3/10 => Loss 0.350, Train_accy 67.75
+                                               30%|███       | 3/10 [00:26<00:44,  6.41s/it] 40%|████      | 4/10 [00:26<00:35,  5.88s/it]Task 10, Epoch 4/10 => Loss 0.277, Train_accy 75.46
+                                               40%|████      | 4/10 [00:31<00:35,  5.88s/it] 50%|█████     | 5/10 [00:31<00:27,  5.51s/it]Task 10, Epoch 5/10 => Loss 0.285, Train_accy 75.28
+                                               50%|█████     | 5/10 [00:42<00:27,  5.51s/it] 60%|██████    | 6/10 [00:42<00:30,  7.51s/it]Task 10, Epoch 6/10 => Loss 0.215, Train_accy 79.14, Test_accy 80.87
+                                               60%|██████    | 6/10 [00:47<00:30,  7.51s/it] 70%|███████   | 7/10 [00:47<00:20,  6.74s/it]Task 10, Epoch 7/10 => Loss 0.231, Train_accy 78.18
+                                               70%|███████   | 7/10 [00:53<00:20,  6.74s/it] 80%|████████  | 8/10 [00:53<00:12,  6.24s/it]Task 10, Epoch 8/10 => Loss 0.184, Train_accy 79.32
+                                               80%|████████  | 8/10 [00:58<00:12,  6.24s/it] 90%|█████████ | 9/10 [00:58<00:05,  5.83s/it]Task 10, Epoch 9/10 => Loss 0.201, Train_accy 77.21
+                                               90%|█████████ | 9/10 [01:03<00:05,  5.83s/it]100%|██████████| 10/10 [01:03<00:00,  5.63s/it]100%|██████████| 10/10 [01:03<00:00,  6.32s/it]
+Task 10, Epoch 10/10 => Loss 0.173, Train_accy 79.49
+2026-03-10 19:17:12,311 [cola.py] => Task 10, Epoch 10/10 => Loss 0.173, Train_accy 79.49
+2026-03-10 19:17:18,905 [trainer.py] => No NME accuracy.
+2026-03-10 19:17:18,905 [trainer.py] => CNN: {'total': np.float64(80.96), '00-09': np.float64(80.25), '10-19': np.float64(80.24), '20-29': np.float64(77.05), '30-39': np.float64(85.2), '40-49': np.float64(72.52), '50-59': np.float64(81.33), '60-69': np.float64(82.47), '70-79': np.float64(83.15), '80-89': np.float64(80.11), '90-99': np.float64(80.11), '100-109': np.float64(86.26), 'old': np.float64(80.41), 'new': np.float64(86.26)}
+2026-03-10 19:17:18,905 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81), np.float64(83.15), np.float64(83.39), np.float64(81.46), np.float64(80.96)]
+2026-03-10 19:17:18,906 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25), np.float64(95.01), np.float64(94.3), np.float64(93.22), np.float64(93.35)]
+
+Average Accuracy (CNN): 86.2218181818182
+2026-03-10 19:17:18,906 [trainer.py] => Average Accuracy (CNN): 86.2218181818182 
+
+2026-03-10 19:17:18,906 [trainer.py] => Forgetting (CNN): 6.701000000000002
+task 11
+2026-03-10 19:17:18,907 [trainer.py] => All params: 172050543
+2026-03-10 19:17:18,907 [trainer.py] => Trainable params: 453231
+2026-03-10 19:17:18,908 [cola.py] => Learning on 110-120
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:13<?, ?it/s] 10%|█         | 1/10 [00:13<02:00, 13.36s/it]Task 11, Epoch 1/10 => Loss 1.214, Train_accy 18.92, Test_accy 78.70
+                                               10%|█         | 1/10 [00:19<02:00, 13.36s/it] 20%|██        | 2/10 [00:19<01:12,  9.09s/it]Task 11, Epoch 2/10 => Loss 0.385, Train_accy 63.30
+                                               20%|██        | 2/10 [00:25<01:12,  9.09s/it] 30%|███       | 3/10 [00:25<00:54,  7.83s/it]Task 11, Epoch 3/10 => Loss 0.296, Train_accy 71.25
+                                               30%|███       | 3/10 [00:32<00:54,  7.83s/it] 40%|████      | 4/10 [00:32<00:43,  7.23s/it]Task 11, Epoch 4/10 => Loss 0.284, Train_accy 76.09
+                                               40%|████      | 4/10 [00:38<00:43,  7.23s/it] 50%|█████     | 5/10 [00:38<00:34,  6.88s/it]Task 11, Epoch 5/10 => Loss 0.283, Train_accy 75.89
+                                               50%|█████     | 5/10 [00:51<00:34,  6.88s/it] 60%|██████    | 6/10 [00:51<00:36,  9.07s/it]Task 11, Epoch 6/10 => Loss 0.261, Train_accy 76.30, Test_accy 79.72
+                                               60%|██████    | 6/10 [00:57<00:36,  9.07s/it] 70%|███████   | 7/10 [00:57<00:24,  8.13s/it]Task 11, Epoch 7/10 => Loss 0.258, Train_accy 77.64
+                                               70%|███████   | 7/10 [01:04<00:24,  8.13s/it] 80%|████████  | 8/10 [01:04<00:15,  7.55s/it]Task 11, Epoch 8/10 => Loss 0.229, Train_accy 75.62
+                                               80%|████████  | 8/10 [01:10<00:15,  7.55s/it] 90%|█████████ | 9/10 [01:10<00:07,  7.10s/it]Task 11, Epoch 9/10 => Loss 0.229, Train_accy 76.77
+                                               90%|█████████ | 9/10 [01:16<00:07,  7.10s/it]100%|██████████| 10/10 [01:16<00:00,  6.80s/it]100%|██████████| 10/10 [01:16<00:00,  7.64s/it]
+Task 11, Epoch 10/10 => Loss 0.210, Train_accy 76.50
+2026-03-10 19:18:35,333 [cola.py] => Task 11, Epoch 10/10 => Loss 0.210, Train_accy 76.50
+2026-03-10 19:18:42,432 [trainer.py] => No NME accuracy.
+2026-03-10 19:18:42,432 [trainer.py] => CNN: {'total': np.float64(80.46), '00-09': np.float64(80.57), '10-19': np.float64(77.11), '20-29': np.float64(74.32), '30-39': np.float64(86.03), '40-49': np.float64(70.23), '50-59': np.float64(81.33), '60-69': np.float64(82.82), '70-79': np.float64(82.05), '80-89': np.float64(79.84), '90-99': np.float64(80.11), '100-109': np.float64(84.03), '110-119': np.float64(84.72), 'old': np.float64(79.98), 'new': np.float64(84.72)}
+2026-03-10 19:18:42,432 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81), np.float64(83.15), np.float64(83.39), np.float64(81.46), np.float64(80.96), np.float64(80.46)]
+2026-03-10 19:18:42,432 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25), np.float64(95.01), np.float64(94.3), np.float64(93.22), np.float64(93.35), np.float64(93.26)]
+
+Average Accuracy (CNN): 85.74166666666667
+2026-03-10 19:18:42,432 [trainer.py] => Average Accuracy (CNN): 85.74166666666667 
+
+2026-03-10 19:18:42,432 [trainer.py] => Forgetting (CNN): 6.729090909090911
+task 12
+2026-03-10 19:18:42,434 [trainer.py] => All params: 172058233
+2026-03-10 19:18:42,435 [trainer.py] => Trainable params: 460921
+2026-03-10 19:18:42,436 [cola.py] => Learning on 120-130
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:12<?, ?it/s] 10%|█         | 1/10 [00:12<01:49, 12.17s/it]Task 12, Epoch 1/10 => Loss 1.719, Train_accy 1.50, Test_accy 76.98
+                                               10%|█         | 1/10 [00:16<01:49, 12.17s/it] 20%|██        | 2/10 [00:16<01:00,  7.62s/it]Task 12, Epoch 2/10 => Loss 0.497, Train_accy 40.24
+                                               20%|██        | 2/10 [00:21<01:00,  7.62s/it] 30%|███       | 3/10 [00:21<00:43,  6.20s/it]Task 12, Epoch 3/10 => Loss 0.373, Train_accy 60.66
+                                               30%|███       | 3/10 [00:25<00:43,  6.20s/it] 40%|████      | 4/10 [00:25<00:33,  5.53s/it]Task 12, Epoch 4/10 => Loss 0.273, Train_accy 72.07
+                                               40%|████      | 4/10 [00:30<00:33,  5.53s/it] 50%|█████     | 5/10 [00:30<00:25,  5.13s/it]Task 12, Epoch 5/10 => Loss 0.253, Train_accy 72.67
+                                               50%|█████     | 5/10 [00:41<00:25,  5.13s/it] 60%|██████    | 6/10 [00:41<00:29,  7.36s/it]Task 12, Epoch 6/10 => Loss 0.259, Train_accy 74.97, Test_accy 79.48
+                                               60%|██████    | 6/10 [00:46<00:29,  7.36s/it] 70%|███████   | 7/10 [00:46<00:19,  6.38s/it]Task 12, Epoch 7/10 => Loss 0.265, Train_accy 73.37
+                                               70%|███████   | 7/10 [00:50<00:19,  6.38s/it] 80%|████████  | 8/10 [00:50<00:11,  5.78s/it]Task 12, Epoch 8/10 => Loss 0.232, Train_accy 74.67
+                                               80%|████████  | 8/10 [00:55<00:11,  5.78s/it] 90%|█████████ | 9/10 [00:55<00:05,  5.40s/it]Task 12, Epoch 9/10 => Loss 0.186, Train_accy 76.48
+                                               90%|█████████ | 9/10 [00:59<00:05,  5.40s/it]100%|██████████| 10/10 [00:59<00:00,  5.13s/it]100%|██████████| 10/10 [00:59<00:00,  5.97s/it]
+Task 12, Epoch 10/10 => Loss 0.188, Train_accy 76.18
+2026-03-10 19:19:42,116 [cola.py] => Task 12, Epoch 10/10 => Loss 0.188, Train_accy 76.18
+2026-03-10 19:19:49,611 [trainer.py] => No NME accuracy.
+2026-03-10 19:19:49,611 [trainer.py] => CNN: {'total': np.float64(79.73), '00-09': np.float64(78.03), '10-19': np.float64(76.63), '20-29': np.float64(73.63), '30-39': np.float64(83.8), '40-49': np.float64(71.37), '50-59': np.float64(81.67), '60-69': np.float64(84.88), '70-79': np.float64(82.78), '80-89': np.float64(79.3), '90-99': np.float64(77.27), '100-109': np.float64(83.07), '110-119': np.float64(82.38), '120-129': np.float64(79.58), 'old': np.float64(79.74), 'new': np.float64(79.58)}
+2026-03-10 19:19:49,611 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81), np.float64(83.15), np.float64(83.39), np.float64(81.46), np.float64(80.96), np.float64(80.46), np.float64(79.73)]
+2026-03-10 19:19:49,611 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25), np.float64(95.01), np.float64(94.3), np.float64(93.22), np.float64(93.35), np.float64(93.26), np.float64(93.14)]
+
+Average Accuracy (CNN): 85.27923076923078
+2026-03-10 19:19:49,611 [trainer.py] => Average Accuracy (CNN): 85.27923076923078 
+
+2026-03-10 19:19:49,611 [trainer.py] => Forgetting (CNN): 7.130000000000003
+task 13
+2026-03-10 19:19:49,612 [trainer.py] => All params: 172065923
+2026-03-10 19:19:49,613 [trainer.py] => Trainable params: 468611
+2026-03-10 19:19:49,614 [cola.py] => Learning on 130-140
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:13<?, ?it/s] 10%|█         | 1/10 [00:13<01:59, 13.23s/it]Task 13, Epoch 1/10 => Loss 1.492, Train_accy 10.46, Test_accy 77.63
+                                               10%|█         | 1/10 [00:18<01:59, 13.23s/it] 20%|██        | 2/10 [00:18<01:08,  8.51s/it]Task 13, Epoch 2/10 => Loss 0.463, Train_accy 54.51
+                                               20%|██        | 2/10 [00:23<01:08,  8.51s/it] 30%|███       | 3/10 [00:23<00:48,  6.97s/it]Task 13, Epoch 3/10 => Loss 0.281, Train_accy 69.64
+                                               30%|███       | 3/10 [00:28<00:48,  6.97s/it] 40%|████      | 4/10 [00:28<00:37,  6.26s/it]Task 13, Epoch 4/10 => Loss 0.274, Train_accy 75.26
+                                               40%|████      | 4/10 [00:33<00:37,  6.26s/it] 50%|█████     | 5/10 [00:33<00:29,  5.88s/it]Task 13, Epoch 5/10 => Loss 0.241, Train_accy 79.51
+                                               50%|█████     | 5/10 [00:47<00:29,  5.88s/it] 60%|██████    | 6/10 [00:47<00:33,  8.34s/it]Task 13, Epoch 6/10 => Loss 0.251, Train_accy 77.72, Test_accy 79.48
+                                               60%|██████    | 6/10 [00:52<00:33,  8.34s/it] 70%|███████   | 7/10 [00:52<00:21,  7.30s/it]Task 13, Epoch 7/10 => Loss 0.232, Train_accy 79.25
+                                               70%|███████   | 7/10 [00:57<00:21,  7.30s/it] 80%|████████  | 8/10 [00:57<00:13,  6.63s/it]Task 13, Epoch 8/10 => Loss 0.231, Train_accy 78.40
+                                               80%|████████  | 8/10 [01:02<00:13,  6.63s/it] 90%|█████████ | 9/10 [01:02<00:06,  6.18s/it]Task 13, Epoch 9/10 => Loss 0.181, Train_accy 78.83
+                                               90%|█████████ | 9/10 [01:07<00:06,  6.18s/it]100%|██████████| 10/10 [01:07<00:00,  5.82s/it]100%|██████████| 10/10 [01:07<00:00,  6.76s/it]
+Task 13, Epoch 10/10 => Loss 0.192, Train_accy 80.19
+2026-03-10 19:20:57,248 [cola.py] => Task 13, Epoch 10/10 => Loss 0.192, Train_accy 80.19
+2026-03-10 19:21:05,149 [trainer.py] => No NME accuracy.
+2026-03-10 19:21:05,149 [trainer.py] => CNN: {'total': np.float64(79.74), '00-09': np.float64(79.3), '10-19': np.float64(78.31), '20-29': np.float64(74.32), '30-39': np.float64(81.01), '40-49': np.float64(68.32), '50-59': np.float64(82.67), '60-69': np.float64(81.44), '70-79': np.float64(81.32), '80-89': np.float64(79.3), '90-99': np.float64(78.98), '100-109': np.float64(82.75), '110-119': np.float64(82.12), '120-129': np.float64(76.25), '130-139': np.float64(88.13), 'old': np.float64(79.16), 'new': np.float64(88.13)}
+2026-03-10 19:21:05,149 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81), np.float64(83.15), np.float64(83.39), np.float64(81.46), np.float64(80.96), np.float64(80.46), np.float64(79.73), np.float64(79.74)]
+2026-03-10 19:21:05,149 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25), np.float64(95.01), np.float64(94.3), np.float64(93.22), np.float64(93.35), np.float64(93.26), np.float64(93.14), np.float64(92.95)]
+
+Average Accuracy (CNN): 84.88357142857144
+2026-03-10 19:21:05,149 [trainer.py] => Average Accuracy (CNN): 84.88357142857144 
+
+2026-03-10 19:21:05,150 [trainer.py] => Forgetting (CNN): 6.800769230769232
+task 14
+2026-03-10 19:21:05,151 [trainer.py] => All params: 172073613
+2026-03-10 19:21:05,153 [trainer.py] => Trainable params: 476301
+2026-03-10 19:21:05,155 [cola.py] => Learning on 140-150
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:14<?, ?it/s] 10%|█         | 1/10 [00:14<02:10, 14.53s/it]Task 14, Epoch 1/10 => Loss 1.242, Train_accy 15.07, Test_accy 75.58
+                                               10%|█         | 1/10 [00:20<02:10, 14.53s/it] 20%|██        | 2/10 [00:20<01:15,  9.45s/it]Task 14, Epoch 2/10 => Loss 0.338, Train_accy 57.25
+                                               20%|██        | 2/10 [00:26<01:15,  9.45s/it] 30%|███       | 3/10 [00:26<00:55,  7.88s/it]Task 14, Epoch 3/10 => Loss 0.262, Train_accy 72.26
+                                               30%|███       | 3/10 [00:32<00:55,  7.88s/it] 40%|████      | 4/10 [00:32<00:42,  7.12s/it]Task 14, Epoch 4/10 => Loss 0.219, Train_accy 78.34
+                                               40%|████      | 4/10 [00:38<00:42,  7.12s/it] 50%|█████     | 5/10 [00:38<00:33,  6.66s/it]Task 14, Epoch 5/10 => Loss 0.333, Train_accy 77.00
+                                               50%|█████     | 5/10 [00:52<00:33,  6.66s/it] 60%|██████    | 6/10 [00:52<00:37,  9.37s/it]Task 14, Epoch 6/10 => Loss 0.244, Train_accy 78.98, Test_accy 78.40
+                                               60%|██████    | 6/10 [00:58<00:37,  9.37s/it] 70%|███████   | 7/10 [00:58<00:24,  8.22s/it]Task 14, Epoch 7/10 => Loss 0.216, Train_accy 80.54
+                                               70%|███████   | 7/10 [01:04<00:24,  8.22s/it] 80%|████████  | 8/10 [01:04<00:14,  7.47s/it]Task 14, Epoch 8/10 => Loss 0.200, Train_accy 79.41
+                                               80%|████████  | 8/10 [01:10<00:14,  7.47s/it] 90%|█████████ | 9/10 [01:10<00:06,  6.98s/it]Task 14, Epoch 9/10 => Loss 0.189, Train_accy 80.68
+                                               90%|█████████ | 9/10 [01:16<00:06,  6.98s/it]100%|██████████| 10/10 [01:16<00:00,  6.63s/it]100%|██████████| 10/10 [01:16<00:00,  7.63s/it]
+Task 14, Epoch 10/10 => Loss 0.202, Train_accy 78.49
+2026-03-10 19:22:21,491 [cola.py] => Task 14, Epoch 10/10 => Loss 0.202, Train_accy 78.49
+2026-03-10 19:22:30,085 [trainer.py] => No NME accuracy.
+2026-03-10 19:22:30,085 [trainer.py] => CNN: {'total': np.float64(79.15), '00-09': np.float64(75.8), '10-19': np.float64(75.18), '20-29': np.float64(73.97), '30-39': np.float64(78.21), '40-49': np.float64(64.89), '50-59': np.float64(79.0), '60-69': np.float64(79.73), '70-79': np.float64(81.32), '80-89': np.float64(79.57), '90-99': np.float64(76.14), '100-109': np.float64(82.75), '110-119': np.float64(81.35), '120-129': np.float64(78.33), '130-139': np.float64(87.41), '140-149': np.float64(89.7), 'old': np.float64(78.24), 'new': np.float64(89.7)}
+2026-03-10 19:22:30,085 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81), np.float64(83.15), np.float64(83.39), np.float64(81.46), np.float64(80.96), np.float64(80.46), np.float64(79.73), np.float64(79.74), np.float64(79.15)]
+2026-03-10 19:22:30,085 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25), np.float64(95.01), np.float64(94.3), np.float64(93.22), np.float64(93.35), np.float64(93.26), np.float64(93.14), np.float64(92.95), np.float64(92.95)]
+
+Average Accuracy (CNN): 84.50133333333335
+2026-03-10 19:22:30,085 [trainer.py] => Average Accuracy (CNN): 84.50133333333335 
+
+2026-03-10 19:22:30,085 [trainer.py] => Forgetting (CNN): 7.174285714285714
+task 15
+2026-03-10 19:22:30,086 [trainer.py] => All params: 172081303
+2026-03-10 19:22:30,087 [trainer.py] => Trainable params: 483991
+2026-03-10 19:22:30,088 [cola.py] => Learning on 150-160
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:15<?, ?it/s] 10%|█         | 1/10 [00:15<02:17, 15.26s/it]Task 15, Epoch 1/10 => Loss 1.467, Train_accy 10.70, Test_accy 76.33
+                                               10%|█         | 1/10 [00:21<02:17, 15.26s/it] 20%|██        | 2/10 [00:21<01:19,  9.90s/it]Task 15, Epoch 2/10 => Loss 0.509, Train_accy 52.99
+                                               20%|██        | 2/10 [00:27<01:19,  9.90s/it] 30%|███       | 3/10 [00:27<00:56,  8.08s/it]Task 15, Epoch 3/10 => Loss 0.372, Train_accy 67.98
+                                               30%|███       | 3/10 [00:33<00:56,  8.08s/it] 40%|████      | 4/10 [00:33<00:43,  7.28s/it]Task 15, Epoch 4/10 => Loss 0.308, Train_accy 72.98
+                                               40%|████      | 4/10 [00:39<00:43,  7.28s/it] 50%|█████     | 5/10 [00:39<00:34,  6.81s/it]Task 15, Epoch 5/10 => Loss 0.328, Train_accy 71.43
+                                               50%|█████     | 5/10 [00:54<00:34,  6.81s/it] 60%|██████    | 6/10 [00:54<00:38,  9.68s/it]Task 15, Epoch 6/10 => Loss 0.309, Train_accy 74.52, Test_accy 78.96
+                                               60%|██████    | 6/10 [01:00<00:38,  9.68s/it] 70%|███████   | 7/10 [01:00<00:25,  8.44s/it]Task 15, Epoch 7/10 => Loss 0.277, Train_accy 72.98
+                                               70%|███████   | 7/10 [01:06<00:25,  8.44s/it] 80%|████████  | 8/10 [01:06<00:15,  7.75s/it]Task 15, Epoch 8/10 => Loss 0.244, Train_accy 74.31
+                                               80%|████████  | 8/10 [01:12<00:15,  7.75s/it] 90%|█████████ | 9/10 [01:12<00:07,  7.23s/it]Task 15, Epoch 9/10 => Loss 0.241, Train_accy 74.45
+                                               90%|█████████ | 9/10 [01:18<00:07,  7.23s/it]100%|██████████| 10/10 [01:18<00:00,  6.81s/it]100%|██████████| 10/10 [01:18<00:00,  7.87s/it]
+Task 15, Epoch 10/10 => Loss 0.225, Train_accy 75.30
+2026-03-10 19:23:48,821 [cola.py] => Task 15, Epoch 10/10 => Loss 0.225, Train_accy 75.30
+2026-03-10 19:23:57,860 [trainer.py] => No NME accuracy.
+2026-03-10 19:23:57,860 [trainer.py] => CNN: {'total': np.float64(79.68), '00-09': np.float64(79.62), '10-19': np.float64(77.11), '20-29': np.float64(76.71), '30-39': np.float64(79.89), '40-49': np.float64(67.56), '50-59': np.float64(81.0), '60-69': np.float64(79.73), '70-79': np.float64(79.85), '80-89': np.float64(77.15), '90-99': np.float64(75.57), '100-109': np.float64(80.83), '110-119': np.float64(80.05), '120-129': np.float64(77.92), '130-139': np.float64(87.77), '140-149': np.float64(89.16), '150-159': np.float64(80.99), 'old': np.float64(79.59), 'new': np.float64(80.99)}
+2026-03-10 19:23:57,860 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81), np.float64(83.15), np.float64(83.39), np.float64(81.46), np.float64(80.96), np.float64(80.46), np.float64(79.73), np.float64(79.74), np.float64(79.15), np.float64(79.68)]
+2026-03-10 19:23:57,860 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25), np.float64(95.01), np.float64(94.3), np.float64(93.22), np.float64(93.35), np.float64(93.26), np.float64(93.14), np.float64(92.95), np.float64(92.95), np.float64(92.67)]
+
+Average Accuracy (CNN): 84.20000000000002
+2026-03-10 19:23:57,860 [trainer.py] => Average Accuracy (CNN): 84.20000000000002 
+
+2026-03-10 19:23:57,860 [trainer.py] => Forgetting (CNN): 5.982666666666666
+task 16
+2026-03-10 19:23:57,861 [trainer.py] => All params: 172088993
+2026-03-10 19:23:57,862 [trainer.py] => Trainable params: 491681
+2026-03-10 19:23:57,863 [cola.py] => Learning on 160-170
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:13<?, ?it/s] 10%|█         | 1/10 [00:13<02:04, 13.87s/it]Task 16, Epoch 1/10 => Loss 1.947, Train_accy 0.79, Test_accy 76.68
+                                               10%|█         | 1/10 [00:18<02:04, 13.87s/it] 20%|██        | 2/10 [00:18<01:06,  8.33s/it]Task 16, Epoch 2/10 => Loss 0.717, Train_accy 28.92
+                                               20%|██        | 2/10 [00:22<01:06,  8.33s/it] 30%|███       | 3/10 [00:22<00:45,  6.52s/it]Task 16, Epoch 3/10 => Loss 0.539, Train_accy 50.15
+                                               30%|███       | 3/10 [00:27<00:45,  6.52s/it] 40%|████      | 4/10 [00:27<00:34,  5.74s/it]Task 16, Epoch 4/10 => Loss 0.490, Train_accy 59.72
+                                               40%|████      | 4/10 [00:31<00:34,  5.74s/it] 50%|█████     | 5/10 [00:31<00:26,  5.32s/it]Task 16, Epoch 5/10 => Loss 0.417, Train_accy 59.72
+                                               50%|█████     | 5/10 [00:45<00:26,  5.32s/it] 60%|██████    | 6/10 [00:45<00:32,  8.23s/it]Task 16, Epoch 6/10 => Loss 0.334, Train_accy 65.75, Test_accy 77.93
+                                               60%|██████    | 6/10 [00:50<00:32,  8.23s/it] 70%|███████   | 7/10 [00:50<00:20,  6.98s/it]Task 16, Epoch 7/10 => Loss 0.378, Train_accy 62.69
+                                               70%|███████   | 7/10 [00:54<00:20,  6.98s/it] 80%|████████  | 8/10 [00:54<00:12,  6.14s/it]Task 16, Epoch 8/10 => Loss 0.303, Train_accy 67.52
+                                               80%|████████  | 8/10 [00:58<00:12,  6.14s/it] 90%|█████████ | 9/10 [00:58<00:05,  5.61s/it]Task 16, Epoch 9/10 => Loss 0.332, Train_accy 64.17
+                                               90%|█████████ | 9/10 [01:03<00:05,  5.61s/it]100%|██████████| 10/10 [01:03<00:00,  5.23s/it]100%|██████████| 10/10 [01:03<00:00,  6.32s/it]
+Task 16, Epoch 10/10 => Loss 0.314, Train_accy 65.15
+2026-03-10 19:25:01,117 [cola.py] => Task 16, Epoch 10/10 => Loss 0.314, Train_accy 65.15
+2026-03-10 19:25:10,531 [trainer.py] => No NME accuracy.
+2026-03-10 19:25:10,532 [trainer.py] => CNN: {'total': np.float64(77.64), '00-09': np.float64(76.75), '10-19': np.float64(72.53), '20-29': np.float64(72.95), '30-39': np.float64(79.33), '40-49': np.float64(65.27), '50-59': np.float64(79.33), '60-69': np.float64(78.69), '70-79': np.float64(80.22), '80-89': np.float64(77.69), '90-99': np.float64(78.98), '100-109': np.float64(79.23), '110-119': np.float64(75.13), '120-129': np.float64(76.67), '130-139': np.float64(84.53), '140-149': np.float64(87.53), '150-159': np.float64(81.29), '160-169': np.float64(70.62), 'old': np.float64(77.94), 'new': np.float64(70.62)}
+2026-03-10 19:25:10,532 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81), np.float64(83.15), np.float64(83.39), np.float64(81.46), np.float64(80.96), np.float64(80.46), np.float64(79.73), np.float64(79.74), np.float64(79.15), np.float64(79.68), np.float64(77.64)]
+2026-03-10 19:25:10,532 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25), np.float64(95.01), np.float64(94.3), np.float64(93.22), np.float64(93.35), np.float64(93.26), np.float64(93.14), np.float64(92.95), np.float64(92.95), np.float64(92.67), np.float64(92.1)]
+
+Average Accuracy (CNN): 83.81411764705885
+2026-03-10 19:25:10,532 [trainer.py] => Average Accuracy (CNN): 83.81411764705885 
+
+2026-03-10 19:25:10,532 [trainer.py] => Forgetting (CNN): 8.004999999999999
+task 17
+2026-03-10 19:25:10,533 [trainer.py] => All params: 172096683
+2026-03-10 19:25:10,534 [trainer.py] => Trainable params: 499371
+2026-03-10 19:25:10,536 [cola.py] => Learning on 170-180
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:13<?, ?it/s] 10%|█         | 1/10 [00:13<02:03, 13.77s/it]Task 17, Epoch 1/10 => Loss 1.368, Train_accy 8.53, Test_accy 75.78
+                                               10%|█         | 1/10 [00:18<02:03, 13.77s/it] 20%|██        | 2/10 [00:18<01:05,  8.17s/it]Task 17, Epoch 2/10 => Loss 0.382, Train_accy 50.98
+                                               20%|██        | 2/10 [00:22<01:05,  8.17s/it] 30%|███       | 3/10 [00:22<00:45,  6.55s/it]Task 17, Epoch 3/10 => Loss 0.292, Train_accy 69.06
+                                               30%|███       | 3/10 [00:27<00:45,  6.55s/it] 40%|████      | 4/10 [00:27<00:34,  5.71s/it]Task 17, Epoch 4/10 => Loss 0.253, Train_accy 76.46
+                                               40%|████      | 4/10 [00:31<00:34,  5.71s/it] 50%|█████     | 5/10 [00:31<00:26,  5.26s/it]Task 17, Epoch 5/10 => Loss 0.267, Train_accy 75.85
+                                               50%|█████     | 5/10 [00:45<00:26,  5.26s/it] 60%|██████    | 6/10 [00:45<00:33,  8.26s/it]Task 17, Epoch 6/10 => Loss 0.221, Train_accy 78.93, Test_accy 77.88
+                                               60%|██████    | 6/10 [00:49<00:33,  8.26s/it] 70%|███████   | 7/10 [00:49<00:20,  6.96s/it]Task 17, Epoch 7/10 => Loss 0.174, Train_accy 79.03
+                                               70%|███████   | 7/10 [00:54<00:20,  6.96s/it] 80%|████████  | 8/10 [00:54<00:12,  6.20s/it]Task 17, Epoch 8/10 => Loss 0.226, Train_accy 77.90
+                                               80%|████████  | 8/10 [00:58<00:12,  6.20s/it] 90%|█████████ | 9/10 [00:58<00:05,  5.61s/it]Task 17, Epoch 9/10 => Loss 0.177, Train_accy 81.09
+                                               90%|█████████ | 9/10 [01:03<00:05,  5.61s/it]100%|██████████| 10/10 [01:03<00:00,  5.25s/it]100%|██████████| 10/10 [01:03<00:00,  6.32s/it]
+Task 17, Epoch 10/10 => Loss 0.173, Train_accy 79.55
+2026-03-10 19:26:13,769 [cola.py] => Task 17, Epoch 10/10 => Loss 0.173, Train_accy 79.55
+2026-03-10 19:26:23,442 [trainer.py] => No NME accuracy.
+2026-03-10 19:26:23,443 [trainer.py] => CNN: {'total': np.float64(77.86), '00-09': np.float64(74.52), '10-19': np.float64(69.64), '20-29': np.float64(76.37), '30-39': np.float64(77.93), '40-49': np.float64(64.12), '50-59': np.float64(80.33), '60-69': np.float64(78.35), '70-79': np.float64(78.75), '80-89': np.float64(77.96), '90-99': np.float64(75.0), '100-109': np.float64(78.91), '110-119': np.float64(78.24), '120-129': np.float64(78.33), '130-139': np.float64(85.97), '140-149': np.float64(89.16), '150-159': np.float64(78.95), '160-169': np.float64(70.14), '170-179': np.float64(86.9), 'old': np.float64(77.47), 'new': np.float64(86.9)}
+2026-03-10 19:26:23,443 [trainer.py] => CNN top1 curve: [np.float64(94.27), np.float64(91.77), np.float64(88.83), np.float64(88.54), np.float64(85.74), np.float64(85.52), np.float64(84.81), np.float64(83.15), np.float64(83.39), np.float64(81.46), np.float64(80.96), np.float64(80.46), np.float64(79.73), np.float64(79.74), np.float64(79.15), np.float64(79.68), np.float64(77.64), np.float64(77.86)]
+2026-03-10 19:26:23,443 [trainer.py] => CNN top5 curve: [np.float64(99.68), np.float64(98.63), np.float64(97.45), np.float64(97.03), np.float64(95.98), np.float64(95.36), np.float64(95.25), np.float64(95.01), np.float64(94.3), np.float64(93.22), np.float64(93.35), np.float64(93.26), np.float64(93.14), np.float64(92.95), np.float64(92.95), np.float64(92.67), np.float64(92.1), np.float64(91.77)]
+
+Average Accuracy (CNN): 83.48333333333335
+2026-03-10 19:26:23,443 [trainer.py] => Average Accuracy (CNN): 83.48333333333335 
+
+2026-03-10 19:26:23,443 [trainer.py] => Forgetting (CNN): 7.2829411764705885
+task 18
+2026-03-10 19:26:23,444 [trainer.py] => All params: 172104373
+2026-03-10 19:26:23,445 [trainer.py] => Trainable params: 507061
+2026-03-10 19:26:23,446 [cola.py] => Learning on 180-190
+  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:14<?, ?it/s] 10%|█         | 1/10 [00:14<02:13, 14.87s/it]Task 18, Epoch 1/10 => Loss 1.461, Train_accy 3.24, Test_accy 73.68
+                                               10%|█         | 1/10 [00:19<02:13, 14.87s/it] 20%|██        | 2/10 [00:19<01:11,  8.99s/it]Task 18, Epoch 2/10 => Loss 0.467, Train_accy 46.98
+                                               20%|██        | 2/10 [00:24<01:11,  8.99s/it] 30%|███       | 3/10 [00:24<00:50,  7.18s/it]Task 18, Epoch 3/10 => Loss 0.374, Train_accy 67.92
+                                               30%|███       | 3/10 [00:29<00:50,  7.18s/it] 40%|████      | 4/10 [00:29<00:37,  6.28s/it]Task 18, Epoch 4/10 => Loss 0.307, Train_accy 74.23
+                                               40%|████      | 4/10 [00:34<00:37,  6.28s/it] 50%|█████     | 5/10 [00:34<00:29,  5.83s/it]Task 18, Epoch 5/10 => Loss 0.292, Train_accy 72.57
